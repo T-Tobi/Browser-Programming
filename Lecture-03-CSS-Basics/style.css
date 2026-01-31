@@ -1,0 +1,224 @@
+/* ========================================
+   CSS Stylesheet for HTML Semantic Assignment
+   Lecture 03 - CSS Basics
+   ======================================== */
+
+/* Element selector: body */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6; /* Line height for readability */
+  color: #333;
+  background-color: #ffffff;
+  max-width: 900px; /* Limit content width */
+  margin: 0 auto; /* Center the content */
+  padding: 20px; /* Padding for spacing from edges */
+}
+
+/* Element selector: p */
+p {
+  line-height: 1.8; /* Better readability for paragraphs */
+  margin-bottom: 15px;
+}
+
+/* Element selector: h1 */
+h1 {
+  font-size: 2.5em; /* Different font size for h1 */
+  margin-bottom: 20px;
+}
+
+/* Element selector: h2 */
+h2 {
+  font-size: 1.8em; /* Different font size for h2 */
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+/* Element selector: h3 */
+h3 {
+  font-size: 1.3em;
+  margin-bottom: 10px;
+  color: #34495e;
+}
+
+/* Group selector: header, footer */
+header,
+footer {
+  background-color: #3498db; /* Subtle background color */
+  color: white;
+  padding: 25px; /* Padding inside header and footer */
+  text-align: center;
+  border-radius: 8px;
+}
+
+header {
+  margin-bottom: 30px; /* Margin for spacing */
+}
+
+footer {
+  margin-top: 30px; /* Margin for spacing */
+  padding: 20px; /* Additional padding */
+}
+
+/* Descendant selector: header h1 */
+header h1 {
+  color: white;
+  margin-bottom: 10px;
+}
+
+/* Descendant selector: header h3 */
+header h3 {
+  color: #ecf0f1;
+  font-weight: normal;
+}
+
+/* If you add navigation later, these rules will apply */
+/* Descendant selector: nav ul */
+nav ul {
+  list-style: none; /* Remove bullets */
+  padding: 0;
+  margin: 0;
+}
+
+/* Descendant selector: nav li */
+nav li {
+  display: inline-block; /* Make items horizontal */
+  margin-right: 20px;
+}
+
+/* Descendant selector: nav a */
+nav a {
+  text-decoration: none; /* Remove underline */
+  color: white;
+  padding: 10px 15px;
+  transition: background-color 0.3s;
+}
+
+/* Pseudo-class: nav a:hover */
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+}
+
+/* ===== STEP 4: SPACING (Margin vs Padding) ===== */
+/* Element selector: section */
+section {
+  background-color: white;
+  padding: 25px; /* Padding inside sections */
+  margin-bottom: 25px; /* Vertical spacing between sections */
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Element selector: article */
+article {
+  margin-bottom: 20px; /* Margin for spacing */
+  padding: 15px; /* Padding inside articles */
+  border-left: 4px solid #3498db;
+  background-color: #f8f9fa;
+}
+
+/* Element selector: ul */
+ul {
+  margin-left: 20px; /* Margin for indentation */
+  padding-left: 10px; /* Padding for spacing */
+}
+
+/* Element selector: li */
+li {
+  margin-bottom: 8px; /* Spacing between list items */
+}
+
+/* ===== STEP 7: RESPONSIVE IMAGES ===== */
+/* Element selector: img */
+img {
+  max-width: 100%; /* Images never overflow */
+  height: auto; /* Maintain aspect ratio */
+  display: block;
+  margin: 15px 0;
+  border-radius: 5px;
+}
+
+/* Element selector: iframe */
+iframe {
+  max-width: 100%; /* Videos never overflow */
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Element selector: figure */
+figure {
+  margin: 20px 0; /* Margin for spacing */
+  padding: 15px; /* Padding inside figure */
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Element selector: figcaption */
+figcaption {
+  margin-top: 10px; /* Margin for spacing */
+  font-style: italic;
+  color: #555;
+  font-size: 0.9em;
+}
+
+/* ===== LINKS STYLING ===== */
+/* Element selector: a */
+a {
+  color: #3498db;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+/* Pseudo-class: a:hover */
+a:hover {
+  color: #2980b9;
+  text-decoration: underline;
+}
+
+/* Descendant selector: footer a */
+footer a {
+  color: white;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+/* Pseudo-class: footer a:hover */
+footer a:hover {
+  color: #ecf0f1;
+}
+
+/* ===== TEXT FORMATTING ===== */
+/* Element selector: b */
+b {
+  color: #2c3e50;
+}
+
+/* Element selector: i */
+i {
+  color: #555;
+}
+
+/* ===== ID SELECTOR EXAMPLE ===== */
+/* ID selector: #Profile */
+#Profile {
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+/* ID selector: #Portfolio */
+#Portfolio {
+  color: #2c3e50;
+}
+
+/* ID selector: #Interest */
+#Interest {
+  color: #2c3e50;
+}
+
+/* ID selector: #Footer */
+#Footer {
+  border-top: 3px solid white;
+  padding-top: 20px;
+}
