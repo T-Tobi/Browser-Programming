@@ -1,0 +1,243 @@
+/* ========================================
+   CSS Stylesheet for HTML Semantic Assignment
+   Lecture 03 - CSS Basics
+   ======================================== */
+
+/* Element selector: body */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6; /* Line height for readability */
+  color: #333;
+  background-color: #ffffff;
+  max-width: 900px; /* Limit content width */
+  margin: 0 auto; /* Center the content */
+  padding: 20px; /* Padding for spacing from edges */
+}
+
+/* Element selector: p */
+p {
+  line-height: 1.8; /* Better readability for paragraphs */
+  margin-bottom: 15px;
+}
+
+/* Element selector: h1 */
+h1 {
+  font-size: 2.5em; /* Different font size for h1 */
+  margin-bottom: 20px;
+}
+
+/* Element selector: h2 */
+h2 {
+  font-size: 1.8em; /* Different font size for h2 */
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+/* Element selector: h3 */
+h3 {
+  font-size: 1.3em;
+  margin-bottom: 10px;
+}
+
+/* Group selector: header, footer */
+header,
+footer {
+  background-color: #3498db; /* Subtle background color */
+  color: white;
+  padding: 25px; /* Padding inside header and footer */
+  text-align: center;
+  border-radius: 8px;
+}
+
+header {
+  margin-bottom: 30px; /* Margin for spacing */
+}
+
+footer {
+  margin-top: 30px; /* Margin for spacing */
+}
+
+/* Descendant selector: header h3 */
+header h3 {
+  color: #ecf0f1;
+  font-weight: normal;
+}
+
+/* ===== STEP 4: SPACING (Margin vs Padding) ===== */
+/* Element selector: section */
+
+section {
+  background-color: white;
+  padding: 25px; /* Padding inside sections */
+  margin-bottom: 25px; /* Vertical spacing between sections */
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Element selector: ul */
+ul {
+  margin-left: 20px; /* Margin for indentation */
+  padding-left: 10px; /* Padding for spacing */
+}
+
+/* Element selector: li */
+li {
+  margin-bottom: 8px; /* Spacing between list items */
+}
+
+/* ===== STEP 7: RESPONSIVE IMAGES ===== */
+/* Element selector: img */
+img {
+  max-width: 100%; /* Images never overflow */
+  height: auto; /* Maintain aspect ratio */
+  display: block;
+  margin: 15px 0;
+  border-radius: 5px;
+}
+
+/* Element selector: iframe */
+iframe {
+  max-width: 100%; /* Videos never overflow */
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Element selector: figure */
+figure {
+  margin: 20px 0; /* Margin for spacing */
+  padding: 15px; /* Padding inside figure */
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Element selector: figcaption */
+figcaption {
+  margin-top: 10px; /* Margin for spacing */
+  font-style: italic;
+  color: #555;
+  font-size: 0.9em;
+}
+
+/* ===== LINKS STYLING ===== */
+/* Element selector: a */
+a {
+  color: #3498db;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+/* Pseudo-class: a:hover */
+a:hover {
+  color: #2980b9;
+  text-decoration: underline;
+}
+
+/* Descendant selector: footer a */
+footer a {
+  color: white;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+/* Pseudo-class: footer a:hover */
+footer a:hover {
+  color: #ecf0f1;
+}
+
+/* ===== TEXT FORMATTING ===== */
+/* Element selector: b */
+b {
+  color: #2c3e50;
+}
+
+/* Element selector: i */
+i {
+  color: #555;
+}
+
+/* ===== ID SELECTOR EXAMPLE ===== */
+/* ID selector: #Profile */
+#Profile {
+  border-bottom: 2px solid #2b485c;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+/* ID selector: #Portfolio and Interest*/
+#Portfolio #Interest {
+  color: #2c3e50;
+}
+
+/* ID selector: #Footer */
+#Footer {
+  border-top: 3px solid rgb(7, 7, 48);
+  padding-top: 20px;
+}
+
+/* Dark mode */
+.dark-mode {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+
+.dark-mode section {
+  background-color: #2a2a2a;
+}
+
+.dark-mode h1,
+.dark-mode h2,
+.drak-mode b,
+.dark-mode i,
+.dark-mode p,
+.dark-mode li,
+.dark-mode figcaption {
+  color: #f0f0f0;
+}
+
+/* * Minimal styling for readability (not a redesign) */
+
+/* {
+  box-sizing: border-box;
+} */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.container {
+  width: min(950px, 92%);
+  margin: 0 auto;
+  padding: 16px 0;
+}
+
+.subtitle {
+  margin-top: 4px;
+  color: #555;
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 16px;
+  margin: 16px 0;
+}
+
+.row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+button {
+  padding: 10px 14px;
+  cursor: pointer;
+}
+
+input {
+  padding: 10px 12px;
+  width: 160px;
+}

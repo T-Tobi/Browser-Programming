@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" data-lamps="off">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>you love lamp©</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       STICKY HEADER
+  ══════════════════════════════════════════════ -->
+  <header class="site-header">
+
+    <div class="header-inner">
+      <a href="#" class="logo">you love lamp©</a>
+      <nav class="nav">
+        <a href="#">follow</a>
+        <a href="#">course</a>
+      </nav>
+    </div>
+
+    <!-- tagline -->
+    <p class="tagline">lamps for all occasions and every day use.</p>
+
+    <!-- ── CONTROLS BAR ── -->
+    <div class="controls-bar">
+
+      <!-- LEFT: Lamp on/off toggle  💡 ──toggle── ☀️ -->
+      <div class="toggle-group">
+        <span class="toggle-icon is-active" id="lamp-icon-off" aria-hidden="true">💡</span>
+
+        <label class="toggle-switch" aria-label="Turn lamps on or off">
+          <input type="checkbox" id="lamp-toggle" role="switch" aria-checked="false">
+          <div class="toggle-track"></div>
+          <div class="toggle-thumb"></div>
+        </label>
+
+        <span class="toggle-icon" id="lamp-icon-sun" aria-hidden="true">☀️</span>
+      </div>
+
+      <!-- RIGHT: Dark / light mode toggle  🌙 ──toggle── ☀️ -->
+      <div class="toggle-group">
+        <span class="toggle-icon" id="theme-icon-moon" aria-hidden="true">🌙</span>
+
+        <label class="toggle-switch" aria-label="Switch between dark and light mode">
+          <input type="checkbox" id="theme-toggle" role="switch" aria-checked="true">
+          <div class="toggle-track"></div>
+          <div class="toggle-thumb"></div>
+        </label>
+
+        <span class="toggle-icon is-active" id="theme-icon-sun" aria-hidden="true">☀️</span>
+      </div>
+
+    </div><!-- /controls-bar -->
+
+    <div class="divider"></div>
+
+  </header>
+
+
+  <!-- ═══════════════════════════════════════════
+       PRODUCT GRID — 4 items matching the video
+  ══════════════════════════════════════════════ -->
+  <main>
+    <div class="product-grid">
+
+      <!-- 1. The Couch Lamp -->
+      <article class="product-card">
+        <div class="product-img-wrap">
+          <!-- DAY version -->
+          <img
+            class="img-day"
+            src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=900&q=85&auto=format&fit=crop"
+            alt="The Couch Lamp in a bright living room"
+            loading="eager"
+          >
+          <!-- NIGHT / lamp-on version -->
+          <img
+            class="img-night"
+            src="https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?w=900&q=85&auto=format&fit=crop"
+            alt="The Couch Lamp glowing warmly at night"
+            loading="lazy"
+          >
+        </div>
+        <div class="product-info">
+          <p class="product-name">The Couch Lamp</p>
+          <p class="product-price">From $1,200.00</p>
+        </div>
+      </article>
+
+      <!-- 2. The Dining Lamp -->
+      <article class="product-card">
+        <div class="product-img-wrap">
+          <img
+            class="img-day"
+            src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=900&q=85&auto=format&fit=crop"
+            alt="The Dining Lamp above a bright dining table"
+            loading="eager"
+          >
+          <img
+            class="img-night"
+            src="https://images.unsplash.com/photo-1560185127-6ed189bf02f4?w=900&q=85&auto=format&fit=crop"
+            alt="The Dining Lamp casting warm light at night"
+            loading="lazy"
+          >
+        </div>
+        <div class="product-info">
+          <p class="product-name">The Dining Lamp</p>
+          <p class="product-price">From $3,800.00</p>
+        </div>
+      </article>
+
+      <!-- 3. The Desk Lamp -->
+      <article class="product-card">
+        <div class="product-img-wrap">
+          <img
+            class="img-day"
+            src="https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?w=900&q=85&auto=format&fit=crop"
+            alt="The Desk Lamp next to a monitor in daylight"
+            loading="lazy"
+          >
+          <img
+            class="img-night"
+            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=900&q=85&auto=format&fit=crop"
+            alt="The Desk Lamp glowing at a dark workspace"
+            loading="lazy"
+          >
+        </div>
+        <div class="product-info">
+          <p class="product-name">The Desk Lamp</p>
+          <p class="product-price">From $800.00</p>
+        </div>
+      </article>
+
+      <!-- 4. The Lounge Lamp -->
+      <article class="product-card">
+        <div class="product-img-wrap">
+          <img
+            class="img-day"
+            src="https://images.unsplash.com/photo-1540932239986-30128078f3c5?w=900&q=85&auto=format&fit=crop"
+            alt="The Lounge Lamp beside a chair in a bright room"
+            loading="lazy"
+          >
+          <img
+            class="img-night"
+            src="https://images.unsplash.com/photo-1587502537104-aac10f5fb6f7?w=900&q=85&auto=format&fit=crop"
+            alt="The Lounge Lamp glowing softly at night"
+            loading="lazy"
+          >
+        </div>
+        <div class="product-info">
+          <p class="product-name">The Lounge Lamp</p>
+          <p class="product-price">From $2,350.00</p>
+        </div>
+      </article>
+
+    </div><!-- /product-grid -->
+  </main>
+
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════════ -->
+  <footer class="site-footer">
+    <span>© 2025 you love lamp. all rights reserved.</span>
+    <span>designed with light in mind.</span>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
