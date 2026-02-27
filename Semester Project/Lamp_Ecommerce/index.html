@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="description"
+      content="Illume offers luxury lamp collections featuring modern, timeless, and smart lamps designed to add warmth, comfort, and beauty to your home."
+    />
+
+    <!-- Always include this line of code!!! -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" href="img/favicon.png" />
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule=""
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script
+      defer
+      src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
+    ></script>
+    <script defer src="js/script.js"></script>
+
+    <title>Illume &mdash; Luxury Lamp Collection</title>
+  </head>
+  <body>
+    <header class="header">
+      <a href="#" class="header-logo">
+        <span class="logo">Lampllby</span>
+      </a>
+
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li><a class="main-nav-link" href="#models">Models</a></li>
+          <li><a class="main-nav-link" href="#mission">Our Mission</a></li>
+          <li><a class="main-nav-link" href="#careers">Careers</a></li>
+          <li><a class="main-nav-link" href="#about">About us</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-icons">
+        <button class="icon-btn" aria-label="Search">
+          <ion-icon name="search-outline"></ion-icon>
+        </button>
+        <button class="icon-btn" aria-label="User account">
+          <ion-icon name="person-outline"></ion-icon>
+        </button>
+        <button class="icon-btn" aria-label="Shopping cart">
+          <ion-icon name="cart-outline"></ion-icon>
+        </button>
+      </div>
+
+      <button class="btn-mobile-nav">
+        <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+        <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+      </button>
+    </header>
+
+    <main>
+      <section class="section-hero">
+        <div class="hero">
+          <div class="hero-text-box">
+            <h1 class="heading-primary">Illume</h1>
+            <p class="hero-description">
+              Discover our collection of modern, timeless, and smart lamps
+              designed to add warmth, comfort, and beauty to your home. From
+              cozy corners to grand living rooms, we create lights that inspire
+              living.
+            </p>
+            <a href="#collection" class="btn btn--full margin-right-sm"
+              >Shop Collection</a
+            >
+            <a href="#featured" class="btn btn--outline">Learn more &darr;</a>
+          </div>
+
+          <div class="hero-img-box">
+            <div class="product-showcase">
+              <div class="decorative-plant">
+                <div class="plant-pot"></div>
+                <div class="plant-branch"></div>
+              </div>
+              <div class="product-image">
+                <div class="lamp-illustration">
+                  <div class="lamp-base"></div>
+                </div>
+              </div>
+              <div class="product-info">
+                <p class="product-feature">24 hours electricity</p>
+                <p class="product-price">$526,000</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-categories">
+        <div class="container">
+          <div class="category-tags">
+            <button class="tag tag--active">Smart Lamps</button>
+            <button class="tag">Social</button>
+            <button class="tag">Advance</button>
+            <button class="tag">Crystal Ceiling</button>
+            <button class="tag">Glow</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-products" id="collection">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="heading-secondary">Best Sellers</h2>
+            <a href="#all" class="btn-view-all">
+              <span>Shop Collection</span>
+              <ion-icon name="arrow-forward-outline"></ion-icon>
+            </a>
+          </div>
+        </div>
+
+        <div class="container grid grid--3-cols margin-bottom-md">
+          <!-- PRODUCT 01 -->
+          <div class="product-card">
+            <div class="product-card-image">
+              <div class="card-lamp"></div>
+            </div>
+            <div class="product-card-content">
+              <span class="product-badge">EXPLORE COLLECTIONS</span>
+              <h3 class="heading-tertiary">Table Lamps</h3>
+              <p class="product-price-tag">Price - $49.99</p>
+            </div>
+            <button class="add-to-cart" aria-label="Add to cart">
+              <ion-icon name="add-outline"></ion-icon>
+            </button>
+          </div>
+
+          <!-- PRODUCT 02 -->
+          <div class="product-card">
+            <div class="product-card-image">
+              <div
+                class="card-lamp card-lamp--round"
+                style="width: 180px; height: 180px"
+              ></div>
+            </div>
+            <div class="product-card-content">
+              <span class="product-badge">NEW ARRIVAL</span>
+              <h3 class="heading-tertiary">Floor Lamps</h3>
+              <p class="product-price-tag">Price - $49.99</p>
+            </div>
+            <button class="add-to-cart" aria-label="Add to cart">
+              <ion-icon name="add-outline"></ion-icon>
+            </button>
+          </div>
+
+          <!-- PRODUCT 03 -->
+          <div class="product-card">
+            <div class="product-card-image">
+              <div
+                class="card-lamp card-lamp--tilted"
+                style="width: 160px"
+              ></div>
+            </div>
+            <div class="product-card-content">
+              <span class="product-badge">BEST SELLER</span>
+              <h3 class="heading-tertiary">Outdoor Lamps</h3>
+              <p class="product-price-tag">Price - $49.99</p>
+            </div>
+            <button class="add-to-cart" aria-label="Add to cart">
+              <ion-icon name="add-outline"></ion-icon>
+            </button>
+          </div>
+        </div>
+
+        <!-- Collection Preview -->
+        <div class="container">
+          <div class="collection-preview">
+            <div class="collection-info">
+              <p class="collection-badge">EST 2010</p>
+              <h3 class="heading-tertiary">
+                Our collection of modern, timeless, and smart lamps
+              </h3>
+              <p class="collection-description">
+                is designed to add warmth, comfort, and beauty to your home.
+                From cozy corners to grand living rooms, we create lights that
+                inspire living.
+              </p>
+              <ul class="social-links">
+                <li>
+                  <a class="social-link" href="#" aria-label="Facebook">
+                    <ion-icon
+                      class="social-icon"
+                      name="logo-facebook"
+                    ></ion-icon>
+                  </a>
+                </li>
+                <li>
+                  <a class="social-link" href="#" aria-label="LinkedIn">
+                    <ion-icon
+                      class="social-icon"
+                      name="logo-linkedin"
+                    ></ion-icon>
+                  </a>
+                </li>
+                <li>
+                  <a class="social-link" href="#" aria-label="YouTube">
+                    <ion-icon
+                      class="social-icon"
+                      name="logo-youtube"
+                    ></ion-icon>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="collection-images">
+              <div class="collection-image">
+                <div class="card-lamp card-lamp--small"></div>
+              </div>
+              <div class="collection-image">
+                <div class="card-lamp card-lamp--small card-lamp--round"></div>
+              </div>
+              <div class="collection-image">
+                <div class="card-lamp card-lamp--small"></div>
+              </div>
+              <div class="collection-image">
+                <div class="card-lamp card-lamp--small"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-featured" id="featured">
+        <div class="container center-text">
+          <h2 class="heading-secondary">Find the Perfect Lamp</h2>
+          <p class="featured-subtitle">
+            Our collection of modern, timeless, and smart lamps is designed to
+            add warmth, comfort, and beauty to your home. From cozy corners to
+            grand living rooms.
+          </p>
+        </div>
+
+        <div class="container grid grid--2-cols margin-bottom-md">
+          <!-- FEATURED 01 -->
+          <div class="featured-card">
+            <div class="featured-card-image">
+              <div
+                class="card-lamp card-lamp--round"
+                style="width: 120px; height: 120px"
+              ></div>
+            </div>
+            <div class="featured-card-content">
+              <h3 class="heading-tertiary">Aurora Smart LED Table Lamp</h3>
+              <p class="featured-card-description">
+                Lorem ipsum dolor sit amet consectetur. Nec amet dui enim
+                commodo imperdiet.
+              </p>
+              <a href="#" class="learn-more"
+                >Learn More
+                <ion-icon name="arrow-forward-outline"></ion-icon>
+              </a>
+            </div>
+          </div>
+
+          <!-- FEATURED 02 -->
+          <div class="featured-card">
+            <div class="featured-card-image">
+              <div class="card-lamp" style="width: 100px; height: 180px"></div>
+            </div>
+            <div class="featured-card-content">
+              <h3 class="heading-tertiary">Wooden Floor Lamp</h3>
+              <p class="featured-card-description">
+                Lorem ipsum dolor sit amet consectetur. Nec amet dui enim
+                commodo imperdiet.
+              </p>
+              <a href="#" class="learn-more"
+                >Learn More
+                <ion-icon name="arrow-forward-outline"></ion-icon>
+              </a>
+            </div>
+          </div>
+
+          <!-- FEATURED 03 -->
+          <div class="featured-card">
+            <div class="featured-card-image">
+              <div
+                class="card-lamp"
+                style="width: 140px; height: 100px; border-radius: 40%"
+              ></div>
+            </div>
+            <div class="featured-card-content">
+              <h3 class="heading-tertiary">Crystal Ceiling Lamp</h3>
+              <p class="featured-card-description">
+                Lorem ipsum dolor sit amet consectetur. Nec amet dui enim
+                commodo imperdiet.
+              </p>
+              <a href="#" class="learn-more"
+                >Learn More
+                <ion-icon name="arrow-forward-outline"></ion-icon>
+              </a>
+            </div>
+          </div>
+
+          <!-- FEATURED 04 -->
+          <div class="featured-card">
+            <div class="featured-card-image">
+              <div class="card-lamp" style="width: 100px; height: 160px"></div>
+            </div>
+            <div class="featured-card-content">
+              <h3 class="heading-tertiary">Glow Wall Lamp</h3>
+              <p class="featured-card-description">
+                Lorem ipsum dolor sit amet consectetur. Nec amet dui enim
+                commodo imperdiet.
+              </p>
+              <a href="#" class="learn-more"
+                >Learn More
+                <ion-icon name="arrow-forward-outline"></ion-icon>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container grid grid--footer">
+        <div class="logo-col">
+          <a href="#" class="footer-logo">
+            <span class="logo">Lampllby</span>
+          </a>
+
+          <ul class="social-links">
+            <li>
+              <a class="footer-link" href="#" aria-label="Instagram">
+                <ion-icon class="social-icon" name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+            <li>
+              <a class="footer-link" href="#" aria-label="Facebook">
+                <ion-icon class="social-icon" name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+            <li>
+              <a class="footer-link" href="#" aria-label="Twitter">
+                <ion-icon class="social-icon" name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+          </ul>
+
+          <p class="copyright">
+            Copyright &copy; <span class="year">2025</span> by Lampllby, Inc.
+            All rights reserved.
+          </p>
+        </div>
+
+        <div class="address-col">
+          <p class="footer-heading">Contact us</p>
+          <address class="contacts">
+            <p class="address">
+              623 Harrison St., 2nd Floor, San Francisco, CA 94107
+            </p>
+            <p>
+              <a class="footer-link" href="tel:415-201-6370">415-201-6370</a
+              ><br />
+              <a class="footer-link" href="mailto:hello@lampllby.com"
+                >hello@lampllby.com</a
+              >
+            </p>
+          </address>
+        </div>
+
+        <nav class="nav-col">
+          <p class="footer-heading">Company</p>
+          <ul class="footer-nav">
+            <li><a class="footer-link" href="#">About Us</a></li>
+            <li><a class="footer-link" href="#">Our Mission</a></li>
+            <li><a class="footer-link" href="#">Careers</a></li>
+            <li><a class="footer-link" href="#">Press</a></li>
+          </ul>
+        </nav>
+
+        <nav class="nav-col">
+          <p class="footer-heading">Products</p>
+          <ul class="footer-nav">
+            <li><a class="footer-link" href="#">Table Lamps</a></li>
+            <li><a class="footer-link" href="#">Floor Lamps</a></li>
+            <li><a class="footer-link" href="#">Ceiling Lights</a></li>
+            <li><a class="footer-link" href="#">Smart Lamps</a></li>
+          </ul>
+        </nav>
+
+        <nav class="nav-col">
+          <p class="footer-heading">Support</p>
+          <ul class="footer-nav">
+            <li><a class="footer-link" href="#">Contact Us</a></li>
+            <li><a class="footer-link" href="#">FAQs</a></li>
+            <li><a class="footer-link" href="#">Shipping</a></li>
+            <li><a class="footer-link" href="#">Returns</a></li>
+          </ul>
+        </nav>
+
+        <nav class="nav-col">
+          <p class="footer-heading">Legal</p>
+          <ul class="footer-nav">
+            <li><a class="footer-link" href="#">Privacy Policy</a></li>
+            <li><a class="footer-link" href="#">Terms of Service</a></li>
+            <li><a class="footer-link" href="#">Cookie Policy</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>

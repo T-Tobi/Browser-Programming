@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>LumaGlow Lamps</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="bg-gradient"></div>
+
+    <header class="nav">
+      <div class="logo">
+        <span class="logo-mark">LG</span>
+        <span class="logo-text">LumaGlow</span>
+      </div>
+      <nav class="nav-links">
+        <a href="#products">Lamps</a>
+        <a href="#technology">Technology</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="nav-cta">Shop Now</button>
+    </header>
+
+    <main class="hero">
+      <!-- Left: Copy -->
+      <section class="hero-copy">
+        <h1>Light that feels like home.</h1>
+        <p>
+          Hand‑crafted lamps with adaptive, low‑glare bulbs for soft,
+          intelligent illumination in every room.
+        </p>
+
+        <div class="hero-actions">
+          <button class="btn-primary">Explore Collection</button>
+          <button class="btn-secondary" id="toggleLampBtn">Toggle Lamp</button>
+        </div>
+
+        <div class="hero-meta">
+          <div>
+            <span class="meta-label">Color warmth</span>
+            <span class="meta-value">2700K – 5000K</span>
+          </div>
+          <div>
+            <span class="meta-label">Energy usage</span>
+            <span class="meta-value">&lt; 6W LED</span>
+          </div>
+          <div>
+            <span class="meta-label">Lifetime</span>
+            <span class="meta-value">25,000 hrs</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Right: Lamp -->
+      <section class="hero-lamp">
+        <div class="lamp-scene">
+          <div class="lamp">
+            <div class="lamp-head"></div>
+            <div class="lamp-neck"></div>
+            <div class="lamp-stand"></div>
+            <div class="lamp-base"></div>
+            <div class="lamp-glow"></div>
+          </div>
+          <button class="lamp-switch" id="lampSwitch" aria-pressed="false">
+            <span class="switch-knob"></span>
+            <span class="switch-label switch-label-on">On</span>
+            <span class="switch-label switch-label-off">Off</span>
+          </button>
+        </div>
+
+        <div class="lamp-card glass">
+          <h2>Halo Desk Lamp</h2>
+          <p>
+            Ultra‑quiet dimming, touch‑sensitive base and flicker‑free bulbs for
+            focused comfort.
+          </p>
+          <div class="card-row">
+            <span class="pill">Matte black</span>
+            <span class="pill">Warm &amp; cool</span>
+            <span class="pill">USB‑C power</span>
+          </div>
+          <div class="card-footer">
+            <span class="price">$89</span>
+            <button class="btn-ghost">Add to cart</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <section class="strip" id="products">
+      <span>Desk lamps</span>
+      <span>Floor lamps</span>
+      <span>Smart bulbs</span>
+      <span>Ambient kits</span>
+    </section>
+
+    <section class="info" id="technology">
+      <div class="info-card glass">
+        <h3>Adaptive glow</h3>
+        <p>
+          Sensors tune brightness throughout the day, keeping your workspace
+          calm and your eyes relaxed.
+        </p>
+      </div>
+      <div class="info-card glass">
+        <h3>True color</h3>
+        <p>
+          High color‑accuracy LED bulbs preserve natural tones for reading, art
+          and late‑night work.
+        </p>
+      </div>
+      <div class="info-card glass">
+        <h3>Quiet power</h3>
+        <p>
+          Silent drivers and efficient LEDs mean less heat, less noise, and more
+          clarity.
+        </p>
+      </div>
+    </section>
+
+    <footer class="footer" id="contact">
+      <p>© 2026 LumaGlow Lamps. Crafted with light.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
