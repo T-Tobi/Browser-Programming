@@ -1,0 +1,312 @@
+/* ========================================
+   CSS Stylesheet for HTML Semantic Assignment
+   Lecture 05 – JavaScript & DOM
+   ======================================== */
+
+/* ===== CSS VARIABLES – Light theme (default) ===== */
+:root {
+  --bg: #ffffff;
+  --surface: #f8f9fa;
+  --text: #333333;
+  --heading: #2c3e50;
+  --accent: #3498db;
+  --accent-dark: #2980b9;
+  --header-bg: #3498db;
+  --header-text: #ffffff;
+  --border: #dee2e6;
+  --shadow: rgba(0, 0, 0, 0.1);
+  --article-border: #3498db;
+  --sub-text: #555555;
+}
+
+/* ===== DARK THEME ===== */
+body.dark {
+  --bg: #1a1a2e;
+  --surface: #16213e;
+  --text: #e0e0e0;
+  --heading: #a8d8ea;
+  --accent: #4ecdc4;
+  --accent-dark: #38b2ac;
+  --header-bg: #0f3460;
+  --header-text: #e0e0e0;
+  --border: #2d2d4e;
+  --shadow: rgba(0, 0, 0, 0.4);
+  --article-border: #4ecdc4;
+  --sub-text: #aaaaaa;
+}
+
+/* ===== BASE ===== */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background-color: var(--bg);
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+p {
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: var(--header-text);
+}
+
+h2 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  color: var(--heading);
+}
+
+h3 {
+  font-size: 1.3em;
+  margin-bottom: 10px;
+  color: var(--heading);
+}
+
+/* ===== HEADER & FOOTER ===== */
+header,
+footer {
+  background-color: var(--header-bg);
+  color: var(--header-text);
+  padding: 25px;
+  text-align: center;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+header {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+footer {
+  margin-top: 30px;
+}
+
+header h3 {
+  color: #ecf0f1;
+  font-weight: normal;
+}
+
+/* ===== THEME TOGGLE BUTTON (Requirement 3) ===== */
+#theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.85em;
+  font-weight: bold;
+  transition:
+    background 0.3s ease,
+    transform 0.1s ease;
+  letter-spacing: 0.5px;
+}
+
+#theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.35);
+  transform: scale(1.04);
+}
+
+#theme-toggle:active {
+  transform: scale(0.97);
+}
+
+/* ===== SKIP LINK ===== */
+.skip-link {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.85em;
+}
+
+/* ===== SECTIONS ===== */
+section {
+  background-color: var(--surface);
+  padding: 25px;
+  margin-bottom: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px var(--shadow);
+  transition: background-color 0.3s ease;
+}
+
+article {
+  margin-bottom: 20px;
+  padding: 15px;
+  border-left: 4px solid var(--article-border);
+  background-color: var(--bg);
+  border-radius: 0 6px 6px 0;
+  transition: background-color 0.3s ease;
+}
+
+ul {
+  margin-left: 20px;
+  padding-left: 10px;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+/* ===== SKILLS GRID (Requirement 1) ===== */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 16px;
+  margin-top: 10px;
+}
+
+.skill-card {
+  background-color: var(--bg);
+  border: 2px solid var(--accent);
+  border-radius: 10px;
+  padding: 18px 12px;
+  text-align: center;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.3s ease;
+  cursor: default;
+}
+
+.skill-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px var(--shadow);
+}
+
+.skill-icon {
+  display: block;
+  font-size: 2em;
+  margin-bottom: 8px;
+}
+
+.skill-name {
+  font-weight: bold;
+  font-size: 0.95em;
+  color: var(--heading);
+}
+
+/* ===== PROJECT CARDS (Requirement 2) ===== */
+.project-card {
+  margin-bottom: 20px;
+  padding: 20px;
+  border-left: 4px solid var(--accent);
+  background-color: var(--bg);
+  border-radius: 0 8px 8px 0;
+  transition: background-color 0.3s ease;
+}
+
+.project-card h3 {
+  margin-bottom: 8px;
+}
+
+.project-card p {
+  margin-bottom: 10px;
+  color: var(--sub-text);
+}
+
+.project-card a {
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+/* ===== RESPONSIVE IMAGES ===== */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 15px 0;
+  border-radius: 5px;
+}
+
+iframe {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+figure {
+  margin: 20px 0;
+  padding: 15px;
+  background-color: var(--surface);
+  border-radius: 8px;
+  text-align: center;
+}
+
+figcaption {
+  margin-top: 10px;
+  font-style: italic;
+  color: var(--sub-text);
+  font-size: 0.9em;
+}
+
+/* ===== LINKS ===== */
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: var(--accent-dark);
+  text-decoration: underline;
+}
+
+footer a {
+  color: white;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+footer a:hover {
+  color: #ecf0f1;
+}
+
+/* ===== TEXT FORMATTING ===== */
+b {
+  color: var(--heading);
+}
+
+i {
+  color: var(--sub-text);
+}
+
+/* ===== ID SELECTORS ===== */
+#Profile {
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+#Footer {
+  border-top: 3px solid var(--accent-dark);
+  padding-top: 20px;
+}
+
+/* ===== LAST UPDATED (Requirement 5) ===== */
+#last-updated {
+  margin-top: 14px;
+  font-size: 0.82em;
+  color: rgba(255, 255, 255, 0.75);
+  font-style: italic;
+}
+
+/* .weatherBox {
+  margin-bottom: 20px;
+  padding: 15px;
+  border-left: 4px solid var(--article-border);
+  background-color: var(--bg);
+  border-radius: 0 6px 6px 0;
+  transition: background-color 0.3s ease;
+} */

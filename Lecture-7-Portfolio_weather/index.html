@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ashaolu Oluwatobiloba – Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <header>
+      <p><a href="#Footer" class="skip-link">Skip to Page end</a></p>
+      <button id="theme-toggle" aria-label="Toggle dark/light theme">Toggle Theme</button>
+      <h1>Ashaolu Oluwatobiloba</h1>
+      <h3>Student / Aspiring Software &amp; IoT Developer</h3>
+    </header>
+
+    <h2 id="Profile">About Me <a href="#Portfolio">portfolio</a></h2>
+
+    <p><b>Role:</b><i> Student / Aspiring Software &amp; IoT Developer</i></p>
+    <p>
+      <b>Degree Program:</b>
+      <i> Internet of Things (IoT), Savonia University of Applied Sciences</i>
+    </p>
+    <p><b>Location:</b><i> Kuopio, Finland</i></p>
+
+    <p>
+      <b>Short Bio:</b>
+      I am an IoT student with an interest in programming, data analysis, and
+      practical problem-solving using technology. I have experience with Python,
+      object-oriented programming, and basic web development, and I enjoy
+      learning how software and connected systems work together. I am
+      continuously developing my technical skills through coursework, personal
+      projects, and hands-on learning.
+    </p>
+
+    <!-- ===== SKILLS SECTION (Requirement 1) ===== -->
+    <section id="Skills">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <span class="skill-icon">🌐</span>
+          <span class="skill-name">HTML</span>
+        </div>
+        <div class="skill-card">
+          <span class="skill-icon">🎨</span>
+          <span class="skill-name">CSS</span>
+        </div>
+        <div class="skill-card">
+          <span class="skill-icon">⚙️</span>
+          <span class="skill-name">JavaScript</span>
+        </div>
+        <div class="skill-card">
+          <span class="skill-icon">🐍</span>
+          <span class="skill-name">Python</span>
+        </div>
+        <div class="skill-card">
+          <span class="skill-icon">📡</span>
+          <span class="skill-name">IoT Systems</span>
+        </div>
+        <div class="skill-card">
+          <span class="skill-icon">🔌</span>
+          <span class="skill-name">LTspice</span>
+        </div>
+        <div class="skill-card">
+          <span class="skill-icon">📊</span>
+          <span class="skill-name">Data Analysis</span>
+        </div>
+        <div class="skill-card">
+          <span class="skill-icon">🐙</span>
+          <span class="skill-name">Git &amp; GitHub</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PORTFOLIO SECTION ===== -->
+    <section>
+      <h2 id="Portfolio">Portfolio <a href="#Interest">Interest</a></h2>
+      <figure>
+        <img
+          src="Sample-img.jpg"
+          alt="Sample Portfolio Img"
+          height="300"
+          width="500"
+        />
+        <figcaption>Fig 1.0 - Sample Portfolio</figcaption>
+      </figure>
+
+      <figure>
+        <iframe
+          src="https://www.youtube.com/embed/kX3TfdUqpuU"
+          height="300"
+          width="500"
+          title="Semantic Html Youtube Video"
+          frameborder="0"
+        ></iframe>
+        <figcaption>Fig 2.0 - Training Video Youtube</figcaption>
+      </figure>
+
+      <figure>
+        <figcaption>
+          <a href="https://github.com/T-Tobi/Browser-Programming"
+            >Github Repository</a
+          >
+        </figcaption>
+      </figure>
+    </section>
+
+    <!-- ===== PROJECTS SECTION (Requirement 2) ===== -->
+    <section id="Projects">
+      <h2>Projects</h2>
+
+      <article class="project-card">
+        <h3>Browser Programming Portfolio</h3>
+        <p>
+          A structured personal portfolio page built with semantic HTML and CSS, demonstrating
+          proper use of layout elements, responsive design, and accessible navigation.
+        </p>
+        <a href="https://github.com/T-Tobi/Browser-Programming" target="_blank" rel="noopener">
+          View on GitHub →
+        </a>
+      </article>
+
+      <article class="project-card">
+        <h3>IoT Sensor Dashboard (Coming Soon)</h3>
+        <p>
+          A planned project to collect and visualise real-time data from IoT sensors using
+          Python and a web-based dashboard, combining cloud data analytics with embedded systems.
+        </p>
+        <a href="https://github.com/T-Tobi" target="_blank" rel="noopener">
+          View GitHub Profile →
+        </a>
+      </article>
+    </section>
+
+    <!-- ===== AREAS OF INTEREST SECTION ===== -->
+    <section>
+      <h2 id="Interest">Areas of Interest</h2>
+
+      <article>
+        <h3>Technology &amp; Learning</h3>
+        <ul>
+          <li>Cloud Data Analytics</li>
+          <li>Programming Fundamentals</li>
+          <li>Learning New Software tools</li>
+        </ul>
+      </article>
+
+      <article>
+        <h3>Personal Interest</h3>
+        <ul>
+          <li>Sports and Physical Fitness</li>
+          <li>Reading and Self Development</li>
+          <li>Problem-solving activities</li>
+        </ul>
+      </article>
+
+      <article>
+        <h3>Future Plans</h3>
+        <ul>
+          <li>CFA CharterHolder</li>
+          <li>Travel to 100 countries</li>
+        </ul>
+      </article>
+    </section>
+
+    <footer id="Footer">
+      <a href="https://linkedin.com/in/tobi8ashaolu">LinkedIn Profile</a> |
+      <a href="https://github.com/T-Tobi/Browser-Programming.git">GitHub Repository</a> |
+      <a href="#Profile">To Profile</a> |
+      <a href="weather.html">Weather App</a>
+      <!-- Last Updated (Requirement 5) – injected by script.js -->
+      <p id="last-updated"></p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
