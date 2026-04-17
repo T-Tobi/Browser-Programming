@@ -16,26 +16,18 @@ app.get("/api/message", (req, res) => {
     message: "Hello",
     course: "Browser Programming",
     year: 2026,
-    name: "Ashaolu Oluwatobiloba",
-    role: "Student",
+    // name: "Ashaolu Oluwatobiloba",
+    // role: "Student",
     time: new Date(),
   });
 });
 
-// app.get("/api/message2", (req, res) => {
-//   res.json({
-//     message: "Hello",
-//     course: "Browser Programming",
-//     year: 2026,
-//   });
-// });
-
-// app.get("/api/student", (req, res) => {
-//   res.json({
-//     name: "Your Name",
-//     role: "Student"
-//   });
-// });
+app.get("/api/student", (req, res) => {
+  res.json({
+    name: "Ashaolu Oluwatobiloba",
+    role: "Student",
+  });
+});
 
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
