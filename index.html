@@ -1,6 +1,141 @@
 <!doctype html>
-<html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tobi | Portfolio</title>
+
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #0f172a;
+        color: #e2e8f0;
+      }
+
+      header {
+        text-align: center;
+        padding: 60px 20px;
+        background: linear-gradient(135deg, #1e293b, #0f172a);
+      }
+
+      header h1 {
+        font-size: 2.5rem;
+        margin: 0;
+      }
+
+      header p {
+        color: #94a3b8;
+        margin-top: 10px;
+      }
+
+      .container {
+        max-width: 1000px;
+        margin: auto;
+        padding: 40px 20px;
+      }
+
+      .projects {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+      }
+
+      .card {
+        background: #1e293b;
+        padding: 20px;
+        border-radius: 15px;
+        transition:
+          transform 0.2s,
+          box-shadow 0.2s;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+      }
+
+      .card h3 {
+        margin-top: 0;
+      }
+
+      .card p {
+        font-size: 0.9rem;
+        color: #94a3b8;
+      }
+
+      .card a {
+        display: inline-block;
+        margin-top: 10px;
+        text-decoration: none;
+        color: #38bdf8;
+        font-weight: bold;
+      }
+
+      footer {
+        text-align: center;
+        padding: 20px;
+        color: #64748b;
+      }
+    </style>
+  </head>
+
   <body>
-    <h1>TEST SUCCESS</h1>
+    <header>
+      <h1>Tobi</h1>
+      <p>Browser Programming Student • Web Developer</p>
+    </header>
+
+    <div class="container">
+      <h2>Projects</h2>
+
+      <div class="projects">
+        <div class="card">
+          <h3>Semantic HTML</h3>
+          <p>Practice using proper HTML structure and accessibility.</p>
+          <a href="Lecture-02-semantic-html/">View Project →</a>
+        </div>
+
+        <div class="card">
+          <h3>CSS Basics</h3>
+          <p>Styling layouts, colors, and responsive design.</p>
+          <a href="Lecture-03-CSS-Basics/">View Project →</a>
+        </div>
+
+        <div class="card">
+          <h3>JavaScript Basics</h3>
+          <p>Core JS concepts and interactive behavior.</p>
+          <a href="L04-js-basics-in-class/">View Project →</a>
+        </div>
+
+        <div class="card">
+          <h3>DOM & State APIs</h3>
+          <p>Working with DOM manipulation and browser APIs.</p>
+          <a href="L05-dom-state-apis-in-class/">View Project →</a>
+        </div>
+
+        <div class="card">
+          <h3>Portfolio Page</h3>
+          <p>Your personal portfolio project.</p>
+          <a href="Lecture-05-Portfolio-Page/">View Project →</a>
+        </div>
+
+        <div class="card">
+          <h3>Weather App</h3>
+          <p>API-based weather application.</p>
+          <a href="Lecture-7-Portfolio_weather/">View Project →</a>
+        </div>
+
+        <div class="card">
+          <h3>Async Fetch</h3>
+          <p>Using fetch and async/await for API calls.</p>
+          <a href="Lecture-05-Portfolio Update Async_Fetch/">View Project →</a>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>© 2026 Tobi • Built with GitHub Pages</p>
+    </footer>
   </body>
 </html>
