@@ -1,3 +1,6 @@
 [submodule "LivyLamp"]
 	path = LivyLamp
 	url = https://github.com/T-Tobi/LivyLamp.git
+[submodule "Notes App"]
+	path = Notes App
+	url = https://github.com/T-Tobi/Notes-App.git
