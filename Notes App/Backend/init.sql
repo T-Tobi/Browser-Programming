@@ -1,7 +1,0 @@
-CREATE DATABASE notesdb;
-\c notesdb;
-CREATE TABLE notes (
-  id SERIAL PRIMARY KEY,
-  content TEXT NOT NULL,
-  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
