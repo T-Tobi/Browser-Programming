@@ -1,53 +1,39 @@
-Lecture 02 – Semantic HTML & Structure
+# Lecture 03 – CSS Basics
 
-1. What I implemented this lecture
+## What I implemented this lecture
 
-- Built a structured personal profile page that has header, profile content, portfolio, areas of interest and footer.
-- used Semantic contents elements such as header, section, article, figure, figcaption, footer for clearer meaning and structure.
-- I also added multiple internal navigation links using anchor links such as skip to portfolio, skip to interest, skip to profile etc.
-- I used Img, href, iframes to introduce digital contents and links to external pages such as linkedin and GitHub Repo.
+- Applied foundational CSS styling to a semantic HTML page — controlling typography,
+  spacing, colors, and layout using element, group, descendant, ID, and pseudo-class selectors
+- Used the Box Model (margin, padding, border) to control spacing between and inside
+  elements like sections, articles, figures, and the header/footer
+- Made images and iframes responsive using max-width: 100% and height: auto so they
+  never overflow their container regardless of screen size
 
-2. Semantic decisions I made (REQUIRED)
+## CSS selectors I used (at least 5)
 
-Decision 1
+- **Element selector** — `body`, `p`, `h1`, `h2`, `section`, `article`, `img`, `a`
+  — targets all instances of that HTML tag directly
+- **Group selector** — `header, footer` — applies the same blue background, white text,
+  and padding to both elements in one rule instead of repeating the declaration twice
+- **Descendant selector** — `header h3` — targets only `<h3>` elements that sit inside
+  a `<header>`, leaving h3 elements elsewhere on the page unaffected
+- **ID selector** — `#Profile`, `#Portfolio #interest`, `#Footer` — targets a single
+  unique element by its id attribute, used here to add a border under the profile section
+  and a border above the footer
+- **Pseudo-class selector** — `a:hover`, `footer a:hover` — applies styles only when
+  the user's mouse hovers over a link, creating a visual interaction cue without JavaScript
 
-- Element(s) used: `<header>` (with headings)
-- Where in the page: Top of the page for name + role
-- Why this element is semantically correct: `<header>` represents the introductory content of the page (identity + title), which helps browsers and assistive technologies understand the page’s main heading area.
+## One thing I struggled with
 
-Decision 2
+- Understanding the difference between margin and padding — both add space but in
+  different places. Margin adds space _outside_ the element's border (pushing it away
+  from neighbours), while padding adds space _inside_ the border (pushing content away
+  from the edge of the element itself). I kept confusing which one to use when elements
+  felt too close together or too cramped inside.
 
-- Element(s) used: `<section>` for “Portfolio” and “Areas of Interest”
-- Where in the page: Mid-page blocks separating major topics (portfolio media and interests lists)
-- Why this element is semantically correct: A `<section>` groups related content under a theme with its own heading, making the document outline clearer than using generic `<div>` containers.
+## One improvement I want to do next
 
-Decision 3
-
-- Element(s) used: `<article>` inside the “Areas of Interest” section
-- Where in the page: Sub-groups (“Technology & Learning”, “Personal Interest”, “Future Plans”)
-- Why this element is semantically correct: Each `<article>` groups a self-contained set of related items that could stand on its own as a mini-topic within interests, improving structure and readability.
-
-Decision 4
-
-- Element(s) used: `<figure>` + `<figcaption>` around image/iframe
-- Why: Media and caption belong together; `<figure>` clearly communicates “this media with this caption is one unit.”
-
-3. Accessibility considerations
-
-- Included "alt text" on the image (`alt="Sample Portfolio Img"`) so screen readers can describe the image content.
-- Added a "title attribute" to the embedded iframe (“Semantic Html Youtube Video”) to describe the embedded content.
-- Added "skip/jump navigation links" (e.g., skip to page end, jump to sections) to reduce scrolling and improve keyboard navigation.
-
-4. What I learned
-
-- How semantic HTML elements (header/section/article/figure/footer) create a clearer page structure and improve readability for both humans and assistive technology.
-
-5. What I still need to improve
-
-- The proper combination of the semantics.
-
-6. Notes about AI usage (if any)
-
-- Tool used: ChatGPT, GitHub Repo, Youtube Videos, W3 Schools, geeksforgeeks
-- What I accepted as-is:Used Ai to properly word the readme section.
-- What I modified manually: I used the above resources to learn the use of elements but the ordering and contents were mine.
+- Add a media query so the layout adapts on smaller screens — for example, reducing
+  the body padding, font sizes, and section padding on mobile so the page doesn't feel
+  cramped on a phone. Currently the max-width: 900px works on desktop but the fixed
+  padding and font sizes could be more flexible on narrower viewports.
