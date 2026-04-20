@@ -24,13 +24,14 @@
     <!-- ══ HEADER ══════════════════════════════════ -->
     <header class="site-header" role="banner">
       <div class="header-actions">
-        <a
-          href="weather-dashboard.html"
+        <button
+          id="weather-btn"
           class="header-action-btn"
           aria-label="Open SkyBoard weather dashboard"
+          onclick="openWeatherDashboard()"
         >
-          🌤 Weather Forcast
-        </a>
+          🌤 Weather Forecast
+        </button>
         <button id="theme-toggle" aria-label="Toggle dark/light theme">
           <span id="theme-label">Light Mode</span>
         </button>
@@ -67,6 +68,15 @@
             <p class="section-sub">A brief introduction</p>
           </div>
           <div class="about-inner">
+            <!-- Profile photo -->
+            <figure class="profile-figure">
+              <img
+                src="Image.jpeg"
+                alt="Oluwatobiloba Ashaolu — portrait photo"
+                class="profile-photo"
+              />
+            </figure>
+
             <div class="ornament" aria-hidden="true">
               <div class="ornament-diamond"></div>
             </div>
@@ -468,31 +478,6 @@
         </div>
       </section>
 
-      <!-- ── External Data Demo ────────────────── -->
-      <section
-        id="external-data"
-        class="data-section"
-        aria-labelledby="data-heading"
-      >
-        <div class="container">
-          <div class="section-heading">
-            <h2 id="data-heading">External Data Demo</h2>
-            <p class="section-sub">Live data fetched from a public API</p>
-          </div>
-          <div class="data-inner">
-            <div class="button-group">
-              <button id="btnLoadData" class="btn-data">
-                Load Random User
-              </button>
-              <button id="btnClearData" class="btn-data btn-data--outline">
-                Clear
-              </button>
-            </div>
-            <div id="dataOutput" class="data-output" aria-live="polite"></div>
-          </div>
-        </div>
-      </section>
-
       <!-- ── Contact ───────────────────────────── -->
       <section
         id="contact"
@@ -566,6 +551,63 @@
       </p>
       <p id="last-updated" class="footer-updated"></p>
     </footer>
+
+    <!-- ══ WEATHER MODAL ════════════════════════════ -->
+    <div
+      id="weather-modal"
+      class="weather-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="weather-modal-title"
+      hidden
+    >
+      <div
+        class="weather-modal-backdrop"
+        onclick="closeWeatherDashboard()"
+      ></div>
+      <div class="weather-modal-panel">
+        <div class="weather-modal-header">
+          <h2 id="weather-modal-title">🌤 Weather Forecast</h2>
+          <button
+            class="weather-modal-close"
+            onclick="closeWeatherDashboard()"
+            aria-label="Close weather dashboard"
+          >
+            &times;
+          </button>
+        </div>
+        <p class="weather-modal-sub">Current conditions for Finnish cities</p>
+
+        <div class="weather-btn-group">
+          <button
+            class="weather-city-btn"
+            onclick="loadWeather('Kuopio', 62.8924, 27.677)"
+          >
+            Kuopio
+          </button>
+          <button
+            class="weather-city-btn"
+            onclick="loadWeather('Helsinki', 60.1699, 24.9384)"
+          >
+            Helsinki
+          </button>
+          <button
+            class="weather-city-btn"
+            onclick="loadWeather('Oulu', 65.0121, 25.4651)"
+          >
+            Oulu
+          </button>
+        </div>
+
+        <div
+          id="modal-weather-box"
+          class="modal-weather-box"
+          aria-live="polite"
+        >
+          <p class="weather-placeholder">Select a city to load weather data.</p>
+        </div>
+      </div>
+    </div>
 
     <script src="script.js"></script>
   </body>

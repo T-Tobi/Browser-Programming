@@ -24,12 +24,10 @@ const html        = document.documentElement;
 
 function applyTheme(theme) {
   html.setAttribute("data-theme", theme);
-  // Button label shows what you'll switch TO
   themeLabel.textContent = theme === "dark" ? "Light Mode" : "Dark Mode";
   localStorage.setItem("portfolio-theme", theme);
 }
 
-// Load saved preference
 applyTheme(localStorage.getItem("portfolio-theme") || "dark");
 
 themeToggle.addEventListener("click", () => {
@@ -50,7 +48,85 @@ if (lastUpdatedEl) {
   lastUpdatedEl.textContent = "Last updated: " + formatted;
 }
 
-/* ── 4. External Data Demo ─────────────────── */
+/* ── 4. Weather Modal ──────────────────────── */
+const weatherModal = document.getElementById("weather-modal");
+const modalWeatherBox = document.getElementById("modal-weather-box");
+
+function openWeatherDashboard() {
+  weatherModal.removeAttribute("hidden");
+  document.body.style.overflow = "hidden";
+  // Focus the first city button for accessibility
+  const firstBtn = weatherModal.querySelector(".weather-city-btn");
+  if (firstBtn) firstBtn.focus();
+}
+
+function closeWeatherDashboard() {
+  weatherModal.setAttribute("hidden", "");
+  document.body.style.overflow = "";
+  // Return focus to the button that opened the modal
+  document.getElementById("weather-btn").focus();
+}
+
+// Close on Escape key
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && !weatherModal.hasAttribute("hidden")) {
+    closeWeatherDashboard();
+  }
+});
+
+async function loadWeather(cityName, latitude, longitude) {
+  // Mark active button
+  document.querySelectorAll(".weather-city-btn").forEach((btn) => {
+    btn.classList.toggle("active", btn.textContent.trim() === cityName);
+  });
+
+  modalWeatherBox.classList.remove("loaded");
+  modalWeatherBox.innerHTML = '<p class="weather-status">Loading weather data…</p>';
+
+  try {
+    const url =
+      "https://api.open-meteo.com/v1/forecast" +
+      "?latitude=" + latitude +
+      "&longitude=" + longitude +
+      "&current=temperature_2m,wind_speed_10m";
+
+    const response = await fetch(url);
+    if (!response.ok) throw new Error("HTTP Error: " + response.status);
+
+    const data        = await response.json();
+    const temperature = data.current.temperature_2m;
+    const wind        = data.current.wind_speed_10m;
+    const time        = data.current.time;
+
+    const tempRounded = Math.round(temperature);
+    const tempEmoji   = temperature < 0 ? "🥶" : temperature < 10 ? "🌧" : "☀️";
+
+    modalWeatherBox.classList.add("loaded");
+    modalWeatherBox.innerHTML = `
+      <div class="weather-data-row">
+        <span class="weather-data-label">City</span>
+        <span class="weather-data-value">${cityName}</span>
+      </div>
+      <div class="weather-data-row">
+        <span class="weather-data-label">Temperature</span>
+        <span class="weather-data-value">${tempEmoji} ${tempRounded} °C</span>
+      </div>
+      <div class="weather-data-row">
+        <span class="weather-data-label">Wind Speed</span>
+        <span class="weather-data-value">💨 ${wind} km/h</span>
+      </div>
+      <div class="weather-data-row">
+        <span class="weather-data-label">Recorded At</span>
+        <span class="weather-data-value">${time.replace("T", " ")}</span>
+      </div>
+    `;
+  } catch (error) {
+    modalWeatherBox.innerHTML =
+      '<p class="weather-status weather-status--error">⚠ Could not load weather data: ' + error.message + "</p>";
+  }
+}
+
+/* ── 5. External Data Demo (kept for reference) */
 const btnLoadData  = document.getElementById("btnLoadData");
 const btnClearData = document.getElementById("btnClearData");
 const dataOutput   = document.getElementById("dataOutput");
