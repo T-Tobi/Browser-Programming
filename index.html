@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Oluwatobiloba Ashaolu — Browser Programming Student and Web Developer. Portfolio of projects built with HTML, CSS, JavaScript and modern web APIs."
+      content="Oluwatobiloba Ashaolu — IoT Student, Browser Programming Student and Web Developer. Portfolio of projects built with HTML, CSS, JavaScript and modern web APIs."
     />
     <title>Oluwatobiloba Ashaolu | Portfolio</title>
 
@@ -15,641 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap"
       rel="stylesheet"
     />
-
-    <style>
-      /* ── Tokens ─────────────────────────────────── */
-      :root {
-        --bg: #090f0a;
-        --bg-2: #111a12;
-        --surface: #172019;
-        --surface-2: #1e2d1f;
-        --gold: #c9a227;
-        --gold-bright: #f0cc5a;
-        --gold-muted: #7a5e18;
-        --gold-dim: rgba(201, 162, 39, 0.15);
-        --crimson: #8b1c2a;
-        --crimson-soft: #a82638;
-        --crimson-dim: rgba(139, 28, 42, 0.18);
-        --sage: #4e7a56;
-        --sage-light: #7aaa82;
-        --cream: #f5edd6;
-        --cream-muted: #c9bfa0;
-        --text-dim: #7a9480;
-        --border-gold: rgba(201, 162, 39, 0.22);
-        --border-green: rgba(78, 122, 86, 0.25);
-        --radius: 14px;
-        --transition: 0.3s ease;
-      }
-
-      /* ── Reset ──────────────────────────────────── */
-      *,
-      *::before,
-      *::after {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-      html {
-        scroll-behavior: smooth;
-      }
-      body {
-        font-family: "Crimson Text", Georgia, serif;
-        background-color: var(--bg);
-        color: var(--cream);
-        line-height: 1.7;
-        overflow-x: hidden;
-      }
-      img {
-        display: block;
-        max-width: 100%;
-      }
-      a {
-        color: inherit;
-        text-decoration: none;
-      }
-      ul {
-        list-style: none;
-      }
-
-      /* ── Noise texture overlay ───────────────────── */
-      body::before {
-        content: "";
-        position: fixed;
-        inset: 0;
-        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
-        opacity: 0.03;
-        pointer-events: none;
-        z-index: 0;
-      }
-
-      /* ── Skip link (a11y) ───────────────────────── */
-      .skip-link {
-        position: absolute;
-        left: -9999px;
-        top: 1rem;
-        background: var(--gold);
-        color: var(--bg);
-        padding: 0.5rem 1rem;
-        border-radius: 4px;
-        font-weight: 600;
-        z-index: 999;
-      }
-      .skip-link:focus {
-        left: 1rem;
-      }
-
-      /* ── Decorative divider ─────────────────────── */
-      .ornament {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-        justify-content: center;
-        margin: 1.5rem 0;
-      }
-      .ornament::before,
-      .ornament::after {
-        content: "";
-        flex: 1;
-        max-width: 120px;
-        height: 1px;
-        background: linear-gradient(to right, transparent, var(--gold-muted));
-      }
-      .ornament::after {
-        background: linear-gradient(to left, transparent, var(--gold-muted));
-      }
-      .ornament-diamond {
-        width: 8px;
-        height: 8px;
-        background: var(--gold);
-        transform: rotate(45deg);
-        box-shadow: 0 0 10px rgba(201, 162, 39, 0.5);
-      }
-
-      /* ── Site Header ────────────────────────────── */
-      .site-header {
-        position: relative;
-        text-align: center;
-        padding: 6rem 2rem 5rem;
-        background:
-          radial-gradient(
-            ellipse 80% 60% at 50% -10%,
-            rgba(201, 162, 39, 0.1) 0%,
-            transparent 70%
-          ),
-          radial-gradient(
-            ellipse 50% 40% at 20% 100%,
-            rgba(139, 28, 42, 0.12) 0%,
-            transparent 60%
-          ),
-          linear-gradient(180deg, var(--bg-2) 0%, var(--bg) 100%);
-        border-bottom: 1px solid var(--border-gold);
-      }
-
-      /* Corner accents */
-      .site-header::before,
-      .site-header::after {
-        content: "";
-        position: absolute;
-        width: 80px;
-        height: 80px;
-        border-color: var(--gold-muted);
-        border-style: solid;
-        opacity: 0.4;
-      }
-      .site-header::before {
-        top: 2rem;
-        left: 2rem;
-        border-width: 1px 0 0 1px;
-      }
-      .site-header::after {
-        top: 2rem;
-        right: 2rem;
-        border-width: 1px 1px 0 0;
-      }
-
-      .header-badge {
-        display: inline-block;
-        font-family: "Cinzel", serif;
-        font-size: 0.65rem;
-        font-weight: 600;
-        letter-spacing: 0.35em;
-        text-transform: uppercase;
-        color: var(--gold);
-        border: 1px solid var(--border-gold);
-        padding: 0.35rem 1.25rem;
-        border-radius: 2px;
-        margin-bottom: 2rem;
-        background: rgba(201, 162, 39, 0.06);
-      }
-
-      .site-header h1 {
-        font-family: "Cinzel", serif;
-        font-size: clamp(1.8rem, 5.5vw, 4.2rem);
-        font-weight: 900;
-        line-height: 1.1;
-        letter-spacing: 0.01em;
-        background: linear-gradient(
-          135deg,
-          var(--gold-bright) 0%,
-          var(--gold) 45%,
-          var(--cream) 100%
-        );
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        margin-bottom: 0.5rem;
-      }
-
-      .site-header .tagline {
-        font-family: "Crimson Text", serif;
-        font-style: italic;
-        font-size: 1.2rem;
-        color: var(--cream-muted);
-        letter-spacing: 0.04em;
-      }
-
-      .header-nav {
-        margin-top: 2.5rem;
-      }
-      .header-nav ul {
-        display: flex;
-        justify-content: center;
-        gap: 0.5rem;
-        flex-wrap: wrap;
-      }
-      .header-nav a {
-        font-family: "Cinzel", serif;
-        font-size: 0.7rem;
-        font-weight: 600;
-        letter-spacing: 0.2em;
-        text-transform: uppercase;
-        color: var(--text-dim);
-        padding: 0.45rem 1.1rem;
-        border: 1px solid transparent;
-        border-radius: 2px;
-        transition: all var(--transition);
-      }
-      .header-nav a:hover {
-        color: var(--gold);
-        border-color: var(--border-gold);
-        background: var(--gold-dim);
-      }
-
-      /* ── Main content ───────────────────────────── */
-      main {
-        position: relative;
-        z-index: 1;
-      }
-
-      .container {
-        max-width: 1100px;
-        margin: 0 auto;
-        padding: 0 2rem;
-      }
-
-      /* ── Section headings ───────────────────────── */
-      .section-heading {
-        text-align: center;
-        margin-bottom: 3.5rem;
-      }
-      .section-heading h2 {
-        font-family: "Cinzel", serif;
-        font-size: clamp(1.6rem, 4vw, 2.4rem);
-        font-weight: 700;
-        color: var(--cream);
-        letter-spacing: 0.04em;
-      }
-      .section-heading .section-sub {
-        font-style: italic;
-        color: var(--text-dim);
-        font-size: 1rem;
-        margin-top: 0.4rem;
-      }
-
-      /* ── About section ──────────────────────────── */
-      .about-section {
-        padding: 5rem 0 4rem;
-        border-bottom: 1px solid var(--border-green);
-      }
-      .about-inner {
-        max-width: 680px;
-        margin: 0 auto;
-        text-align: center;
-      }
-      .about-inner p {
-        font-size: 1.15rem;
-        color: var(--cream-muted);
-        line-height: 1.85;
-      }
-      .about-inner strong {
-        color: var(--gold);
-        font-weight: 600;
-      }
-
-      /* ── Skills section ─────────────────────────── */
-      .skills-section {
-        padding: 4rem 0;
-        border-bottom: 1px solid var(--border-green);
-      }
-      .skills-grid {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.75rem;
-        justify-content: center;
-      }
-      .skill-tag {
-        font-family: "Inter", sans-serif;
-        font-size: 0.8rem;
-        font-weight: 500;
-        letter-spacing: 0.06em;
-        padding: 0.45rem 1.1rem;
-        border-radius: 3px;
-        border: 1px solid;
-        transition: all var(--transition);
-      }
-      .skill-tag--gold {
-        color: var(--gold);
-        border-color: var(--border-gold);
-        background: var(--gold-dim);
-      }
-      .skill-tag--gold:hover {
-        background: rgba(201, 162, 39, 0.28);
-        box-shadow: 0 0 16px rgba(201, 162, 39, 0.2);
-      }
-      .skill-tag--green {
-        color: var(--sage-light);
-        border-color: var(--border-green);
-        background: rgba(78, 122, 86, 0.1);
-      }
-      .skill-tag--green:hover {
-        background: rgba(78, 122, 86, 0.22);
-      }
-      .skill-tag--crimson {
-        color: #d97080;
-        border-color: rgba(139, 28, 42, 0.35);
-        background: var(--crimson-dim);
-      }
-      .skill-tag--crimson:hover {
-        background: rgba(139, 28, 42, 0.3);
-      }
-
-      /* ── Projects section ───────────────────────── */
-      .projects-section {
-        padding: 5rem 0;
-        border-bottom: 1px solid var(--border-green);
-      }
-      .projects-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-        gap: 1.5rem;
-      }
-
-      /* ── Project card ───────────────────────────── */
-      .project-card {
-        position: relative;
-        background: var(--surface);
-        border: 1px solid var(--border-green);
-        border-radius: var(--radius);
-        padding: 2rem;
-        display: flex;
-        flex-direction: column;
-        gap: 0.75rem;
-        overflow: hidden;
-        transition:
-          transform var(--transition),
-          box-shadow var(--transition),
-          border-color var(--transition);
-        opacity: 0;
-        transform: translateY(24px);
-      }
-      .project-card.visible {
-        opacity: 1;
-        transform: translateY(0);
-        transition:
-          opacity 0.6s ease,
-          transform 0.6s ease,
-          box-shadow var(--transition),
-          border-color var(--transition);
-      }
-
-      /* Top accent bar */
-      .project-card::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 2px;
-        background: linear-gradient(
-          90deg,
-          transparent,
-          var(--gold-muted),
-          transparent
-        );
-        opacity: 0;
-        transition: opacity var(--transition);
-      }
-      /* Side crimson accent */
-      .project-card::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 2rem;
-        bottom: 2rem;
-        width: 2px;
-        background: linear-gradient(
-          180deg,
-          var(--crimson-soft),
-          var(--crimson)
-        );
-        border-radius: 2px;
-        opacity: 0;
-        transition: opacity var(--transition);
-      }
-      .project-card:hover {
-        transform: translateY(-6px);
-        box-shadow:
-          0 16px 40px rgba(0, 0, 0, 0.5),
-          0 0 30px rgba(201, 162, 39, 0.08);
-        border-color: var(--border-gold);
-      }
-      .project-card:hover::before {
-        opacity: 1;
-      }
-      .project-card:hover::after {
-        opacity: 1;
-      }
-
-      /* Card number */
-      .card-number {
-        position: absolute;
-        top: 1.5rem;
-        right: 1.5rem;
-        font-family: "Cinzel", serif;
-        font-size: 0.65rem;
-        font-weight: 700;
-        color: #ffffff;
-        letter-spacing: 0.1em;
-        opacity: 0.5;
-      }
-
-      .project-card h3 {
-        font-family: "Cinzel", serif;
-        font-size: 1rem;
-        font-weight: 700;
-        color: var(--cream);
-        letter-spacing: 0.04em;
-        padding-right: 2rem;
-      }
-
-      .project-card p {
-        font-size: 0.95rem;
-        color: var(--text-dim);
-        line-height: 1.65;
-        flex: 1;
-      }
-
-      .card-link {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.4rem;
-        font-family: "Cinzel", serif;
-        font-size: 0.7rem;
-        font-weight: 700;
-        letter-spacing: 0.15em;
-        text-transform: uppercase;
-        color: var(--gold);
-        margin-top: 0.5rem;
-        padding: 0.5rem 0;
-        border-bottom: 1px solid transparent;
-        transition: all var(--transition);
-        align-self: flex-start;
-      }
-      .card-link::after {
-        content: "→";
-        transition: transform var(--transition);
-      }
-      .card-link:hover {
-        color: var(--gold-bright);
-        border-bottom-color: var(--gold-muted);
-      }
-      .card-link:hover::after {
-        transform: translateX(4px);
-      }
-
-      /* ── Contact section ────────────────────────── */
-      .contact-section {
-        padding: 5rem 0;
-        text-align: center;
-      }
-      .contact-inner {
-        max-width: 560px;
-        margin: 0 auto;
-      }
-      .contact-inner p {
-        color: var(--text-dim);
-        font-style: italic;
-        font-size: 1.05rem;
-        margin-bottom: 2rem;
-      }
-      .contact-links {
-        display: flex;
-        justify-content: center;
-        gap: 1rem;
-        flex-wrap: wrap;
-      }
-      .contact-btn {
-        font-family: "Cinzel", serif;
-        font-size: 0.7rem;
-        font-weight: 700;
-        letter-spacing: 0.2em;
-        text-transform: uppercase;
-        padding: 0.75rem 2rem;
-        border-radius: 3px;
-        border: 1px solid;
-        transition: all var(--transition);
-        cursor: pointer;
-      }
-      .contact-btn--gold {
-        background: var(--gold);
-        color: var(--bg);
-        border-color: var(--gold);
-      }
-      .contact-btn--gold:hover {
-        background: var(--gold-bright);
-        box-shadow: 0 0 24px rgba(201, 162, 39, 0.35);
-        transform: translateY(-2px);
-      }
-      .contact-btn--outline {
-        background: transparent;
-        color: var(--cream-muted);
-        border-color: var(--border-green);
-      }
-      .contact-btn--outline:hover {
-        border-color: var(--border-gold);
-        color: var(--gold);
-      }
-
-      /* ── Footer ─────────────────────────────────── */
-      .site-footer {
-        border-top: 1px solid var(--border-gold);
-        padding: 2.5rem 2rem;
-        text-align: center;
-        background: linear-gradient(0deg, var(--bg-2), var(--bg));
-      }
-      .site-footer p {
-        font-family: "Cinzel", serif;
-        font-size: 0.65rem;
-        font-weight: 600;
-        letter-spacing: 0.25em;
-        text-transform: uppercase;
-        color: var(--gold-muted);
-      }
-      .footer-dot {
-        display: inline-block;
-        width: 4px;
-        height: 4px;
-        background: var(--gold-muted);
-        border-radius: 50%;
-        margin: 0 0.75rem;
-        vertical-align: middle;
-      }
-
-      /* ── Live / featured card ───────────────────── */
-      .project-card--live {
-        border-color: rgba(201, 162, 39, 0.3);
-        background: linear-gradient(145deg, var(--surface-2), var(--surface));
-      }
-      .project-card--live:hover {
-        box-shadow:
-          0 16px 40px rgba(0, 0, 0, 0.5),
-          0 0 40px rgba(201, 162, 39, 0.15);
-      }
-
-      .live-badge {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.3rem;
-        font-family: "Inter", sans-serif;
-        font-size: 0.65rem;
-        font-weight: 600;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        color: #4ade80;
-        background: rgba(74, 222, 128, 0.1);
-        border: 1px solid rgba(74, 222, 128, 0.25);
-        padding: 0.2rem 0.65rem;
-        border-radius: 999px;
-        align-self: flex-start;
-        margin-bottom: 0.25rem;
-      }
-
-      /* ── Stagger delays ─────────────────────────── */
-      .project-card:nth-child(1) {
-        transition-delay: 0.05s;
-      }
-      .project-card:nth-child(2) {
-        transition-delay: 0.1s;
-      }
-      .project-card:nth-child(3) {
-        transition-delay: 0.15s;
-      }
-      .project-card:nth-child(4) {
-        transition-delay: 0.2s;
-      }
-      .project-card:nth-child(5) {
-        transition-delay: 0.25s;
-      }
-      .project-card:nth-child(6) {
-        transition-delay: 0.3s;
-      }
-      .project-card:nth-child(7) {
-        transition-delay: 0.35s;
-      }
-      .project-card:nth-child(8) {
-        transition-delay: 0.4s;
-      }
-      .project-card:nth-child(9) {
-        transition-delay: 0.45s;
-      }
-      .project-card:nth-child(10) {
-        transition-delay: 0.5s;
-      }
-      .project-card:nth-child(11) {
-        transition-delay: 0.55s;
-      }
-      .project-card:nth-child(12) {
-        transition-delay: 0.6s;
-      }
-      .project-card:nth-child(13) {
-        transition-delay: 0.65s;
-      }
-      .project-card:nth-child(14) {
-        transition-delay: 0.7s;
-      }
-      .project-card:nth-child(15) {
-        transition-delay: 0.75s;
-      }
-
-      /* ── Responsive ─────────────────────────────── */
-      @media (max-width: 640px) {
-        .site-header {
-          padding: 4rem 1.5rem 3.5rem;
-        }
-        .site-header::before,
-        .site-header::after {
-          width: 50px;
-          height: 50px;
-        }
-        .projects-grid {
-          grid-template-columns: 1fr;
-        }
-        .contact-links {
-          flex-direction: column;
-          align-items: center;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
@@ -657,9 +23,13 @@
 
     <!-- ══ HEADER ══════════════════════════════════ -->
     <header class="site-header" role="banner">
+      <button id="theme-toggle" aria-label="Toggle dark/light theme">
+        <span id="theme-icon">☀️</span> Toggle Theme
+      </button>
+
       <p class="header-badge">Portfolio &mdash; 2026</p>
       <h1>Oluwatobiloba Ashaolu</h1>
-      <p class="tagline">Browser Programming Student &bull; Web Developer</p>
+      <p class="tagline">IoT Student &bull; Browser Programming &bull; Web Developer</p>
 
       <div class="ornament" aria-hidden="true">
         <div class="ornament-diamond"></div>
@@ -669,7 +39,9 @@
         <ul>
           <li><a href="#about">About</a></li>
           <li><a href="#skills">Skills</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#projects">Projects</a></li>
+          <li><a href="#interests">Interests</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -677,7 +49,8 @@
 
     <!-- ══ MAIN ════════════════════════════════════ -->
     <main id="main-content">
-      <!-- About -->
+
+      <!-- ── About ─────────────────────────────── -->
       <section id="about" class="about-section" aria-labelledby="about-heading">
         <div class="container">
           <div class="section-heading">
@@ -688,23 +61,25 @@
             <div class="ornament" aria-hidden="true">
               <div class="ornament-diamond"></div>
             </div>
+            <div class="about-meta">
+              <p><strong>Role:</strong> <em>Student / Aspiring Software &amp; IoT Developer</em></p>
+              <p><strong>Degree Program:</strong> <em>Internet of Things (IoT), Savonia University of Applied Sciences</em></p>
+              <p><strong>Location:</strong> <em>Kuopio, Finland</em></p>
+            </div>
             <p>
-              I'm a <strong>Browser Programming student</strong> learning to
-              build modern web experiences from the ground up — semantic
-              structure, refined styling, and interactive JavaScript. Each
-              project here marks a step forward in crafting interfaces that are
-              both <strong>functional and considered</strong>.
+              I'm an <strong>IoT student</strong> with an interest in programming, data
+              analysis, and practical problem-solving using technology. I have experience
+              with Python, object-oriented programming, and web development — and I'm
+              currently studying <strong>Browser Programming</strong>, building modern web
+              experiences from the ground up. Each project here marks a step forward in
+              crafting interfaces that are both <strong>functional and considered</strong>.
             </p>
           </div>
         </div>
       </section>
 
-      <!-- Skills -->
-      <section
-        id="skills"
-        class="skills-section"
-        aria-labelledby="skills-heading"
-      >
+      <!-- ── Skills ────────────────────────────── -->
+      <section id="skills" class="skills-section" aria-labelledby="skills-heading">
         <div class="container">
           <div class="section-heading">
             <h2 id="skills-heading">Skills</h2>
@@ -712,52 +87,71 @@
           </div>
           <ul class="skills-grid" role="list">
             <li><span class="skill-tag skill-tag--gold">HTML5</span></li>
-            <li>
-              <span class="skill-tag skill-tag--gold">Semantic Markup</span>
-            </li>
-            <li>
-              <span class="skill-tag skill-tag--gold">Accessibility</span>
-            </li>
+            <li><span class="skill-tag skill-tag--gold">Semantic Markup</span></li>
+            <li><span class="skill-tag skill-tag--gold">Accessibility</span></li>
             <li><span class="skill-tag skill-tag--green">CSS3</span></li>
-            <li>
-              <span class="skill-tag skill-tag--green">Responsive Design</span>
-            </li>
-            <li>
-              <span class="skill-tag skill-tag--green"
-                >CSS Grid &amp; Flexbox</span
-              >
-            </li>
-            <li>
-              <span class="skill-tag skill-tag--crimson">JavaScript</span>
-            </li>
-            <li>
-              <span class="skill-tag skill-tag--crimson">DOM Manipulation</span>
-            </li>
-            <li>
-              <span class="skill-tag skill-tag--crimson"
-                >Fetch &amp; Async/Await</span
-              >
-            </li>
-            <li>
-              <span class="skill-tag skill-tag--crimson">Browser APIs</span>
-            </li>
+            <li><span class="skill-tag skill-tag--green">Responsive Design</span></li>
+            <li><span class="skill-tag skill-tag--green">CSS Grid &amp; Flexbox</span></li>
+            <li><span class="skill-tag skill-tag--crimson">JavaScript</span></li>
+            <li><span class="skill-tag skill-tag--crimson">DOM Manipulation</span></li>
+            <li><span class="skill-tag skill-tag--crimson">Fetch &amp; Async/Await</span></li>
+            <li><span class="skill-tag skill-tag--crimson">Browser APIs</span></li>
+            <li><span class="skill-tag skill-tag--crimson">Python</span></li>
+            <li><span class="skill-tag skill-tag--green">IoT Systems</span></li>
+            <li><span class="skill-tag skill-tag--green">Data Analysis</span></li>
+            <li><span class="skill-tag skill-tag--gold">LTspice</span></li>
+            <li><span class="skill-tag skill-tag--gold">Git &amp; GitHub</span></li>
             <li><span class="skill-tag skill-tag--gold">GitHub Pages</span></li>
             <li><span class="skill-tag skill-tag--gold">Vercel</span></li>
             <li><span class="skill-tag skill-tag--gold">Render</span></li>
-            <li>
-              <span class="skill-tag skill-tag--gold">Git &amp; GitHub</span>
-            </li>
             <li><span class="skill-tag skill-tag--green">REST APIs</span></li>
           </ul>
         </div>
       </section>
 
-      <!-- Projects -->
-      <section
-        id="projects"
-        class="projects-section"
-        aria-labelledby="projects-heading"
-      >
+      <!-- ── Portfolio Media ───────────────────── -->
+      <section id="portfolio" class="media-section" aria-labelledby="portfolio-heading">
+        <div class="container">
+          <div class="section-heading">
+            <h2 id="portfolio-heading">Portfolio</h2>
+            <p class="section-sub">Samples &amp; learning resources</p>
+          </div>
+          <div class="media-grid">
+            <figure class="media-card">
+              <img src="Sample-img.jpg" alt="Sample Portfolio Image" loading="lazy" />
+              <figcaption>Fig 1.0 — Sample Portfolio</figcaption>
+            </figure>
+
+            <figure class="media-card">
+              <div class="iframe-wrap">
+                <iframe
+                  src="https://www.youtube.com/embed/kX3TfdUqpuU"
+                  title="Semantic HTML Training Video"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <figcaption>Fig 2.0 — Semantic HTML Training Video</figcaption>
+            </figure>
+
+            <figure class="media-card media-card--link">
+              <div class="media-link-icon" aria-hidden="true">⌥</div>
+              <figcaption>
+                <a
+                  href="https://github.com/T-Tobi/Browser-Programming"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="card-link"
+                >GitHub Repository</a>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── Projects ──────────────────────────── -->
+      <section id="projects" class="projects-section" aria-labelledby="projects-heading">
         <div class="container">
           <div class="section-heading">
             <h2 id="projects-heading">Projects</h2>
@@ -765,248 +159,179 @@
           </div>
 
           <div class="projects-grid">
+
             <article class="project-card">
               <span class="card-number" aria-hidden="true">01</span>
               <h3>GitHub Basics</h3>
-              <p>
-                Introduction to version control — creating repositories,
-                committing changes, branching, and collaborating with Git and
-                GitHub.
-              </p>
-              <a
-                class="card-link"
-                href="Lecture-01-GitHub-basics/"
-                aria-label="View GitHub Basics project"
-                >View Project</a
-              >
+              <p>Introduction to version control — creating repositories, committing changes, branching, and collaborating with Git and GitHub.</p>
+              <a class="card-link" href="Lecture-01-GitHub-basics/" aria-label="View GitHub Basics project">View Project</a>
             </article>
 
             <article class="project-card">
               <span class="card-number" aria-hidden="true">02</span>
               <h3>Semantic HTML</h3>
-              <p>
-                Practising proper HTML document structure, landmark elements,
-                and accessibility best practices.
-              </p>
-              <a
-                class="card-link"
-                href="Lecture-02-semantic-html/"
-                aria-label="View Semantic HTML project"
-                >View Project</a
-              >
+              <p>Practising proper HTML document structure, landmark elements, and accessibility best practices.</p>
+              <a class="card-link" href="Lecture-02-semantic-html/" aria-label="View Semantic HTML project">View Project</a>
             </article>
 
             <article class="project-card">
               <span class="card-number" aria-hidden="true">03</span>
               <h3>CSS Basics</h3>
-              <p>
-                Exploring styling fundamentals — layouts, color theory,
-                typography, and responsive design techniques.
-              </p>
-              <a
-                class="card-link"
-                href="Lecture-03-CSS-Basics/"
-                aria-label="View CSS Basics project"
-                >View Project</a
-              >
+              <p>Exploring styling fundamentals — layouts, color theory, typography, and responsive design techniques.</p>
+              <a class="card-link" href="Lecture-03-CSS-Basics/" aria-label="View CSS Basics project">View Project</a>
             </article>
 
             <article class="project-card">
               <span class="card-number" aria-hidden="true">04</span>
               <h3>JavaScript Basics</h3>
-              <p>
-                Core language concepts including variables, functions, control
-                flow, and interactive browser behaviour.
-              </p>
-              <a
-                class="card-link"
-                href="Lecture-04-Java-Basics/"
-                aria-label="View JavaScript Basics project"
-                >View Project</a
-              >
+              <p>Core language concepts including variables, functions, control flow, and interactive browser behaviour.</p>
+              <a class="card-link" href="Lecture-04-Java-Basics/" aria-label="View JavaScript Basics project">View Project</a>
             </article>
 
             <article class="project-card">
               <span class="card-number" aria-hidden="true">05</span>
               <h3>JS Basics — In Class</h3>
-              <p>
-                Hands-on in-class JavaScript exercises covering core concepts,
-                event handling, and beginner scripting patterns.
-              </p>
-              <a
-                class="card-link"
-                href="L04-js-basics-in-class/"
-                aria-label="View JS Basics in class project"
-                >View Project</a
-              >
+              <p>Hands-on in-class JavaScript exercises covering core concepts, event handling, and beginner scripting patterns.</p>
+              <a class="card-link" href="L04-js-basics-in-class/" aria-label="View JS Basics in class project">View Project</a>
             </article>
 
             <article class="project-card">
               <span class="card-number" aria-hidden="true">06</span>
               <h3>DOM &amp; State APIs</h3>
-              <p>
-                Manipulating the Document Object Model and managing application
-                state through browser APIs.
-              </p>
-              <a
-                class="card-link"
-                href="L05-dom-state-apis-in-class/"
-                aria-label="View DOM and State APIs project"
-                >View Project</a
-              >
+              <p>Manipulating the Document Object Model and managing application state through browser APIs.</p>
+              <a class="card-link" href="L05-dom-state-apis-in-class/" aria-label="View DOM and State APIs project">View Project</a>
             </article>
 
             <article class="project-card">
               <span class="card-number" aria-hidden="true">07</span>
               <h3>Portfolio Page</h3>
-              <p>
-                A personal portfolio project showcasing learned skills in
-                layout, design, and front-end development.
-              </p>
-              <a
-                class="card-link"
-                href="Lecture-05-Portfolio-Page/"
-                aria-label="View Portfolio Page project"
-                >View Project</a
-              >
+              <p>A personal portfolio project showcasing learned skills in layout, design, and front-end development.</p>
+              <a class="card-link" href="Lecture-05-Portfolio-Page/" aria-label="View Portfolio Page project">View Project</a>
             </article>
 
             <article class="project-card">
               <span class="card-number" aria-hidden="true">08</span>
               <h3>Data Formats &amp; APIs</h3>
-              <p>
-                Working with JSON and XML data formats, parsing API responses,
-                and structuring data for use in the browser.
-              </p>
-              <a
-                class="card-link"
-                href="Lecture-7-Data Formats-APIs/"
-                aria-label="View Data Formats and APIs project"
-                >View Project</a
-              >
+              <p>Working with JSON and XML data formats, parsing API responses, and structuring data for use in the browser.</p>
+              <a class="card-link" href="Lecture-7-Data Formats-APIs/" aria-label="View Data Formats and APIs project">View Project</a>
             </article>
 
             <article class="project-card">
               <span class="card-number" aria-hidden="true">09</span>
               <h3>Weather App</h3>
-              <p>
-                A live weather application powered by an external REST API,
-                displaying real-time conditions and forecasts.
-              </p>
-              <a
-                class="card-link"
-                href="Lecture-7-Portfolio_weather/"
-                aria-label="View Weather App project"
-                >View Project</a
-              >
+              <p>A live weather application powered by an external REST API, displaying real-time conditions and forecasts.</p>
+              <a class="card-link" href="Lecture-7-Portfolio_weather/" aria-label="View Weather App project">View Project</a>
             </article>
 
             <article class="project-card">
               <span class="card-number" aria-hidden="true">10</span>
               <h3>Weather App — Extended</h3>
-              <p>
-                An extended version of the weather project with additional
-                features and UI improvements built on the original.
-              </p>
-              <a
-                class="card-link"
-                href="lecture-7weather/"
-                aria-label="View Extended Weather App project"
-                >View Project</a
-              >
+              <p>An extended version of the weather project with additional features and UI improvements built on the original.</p>
+              <a class="card-link" href="lecture-7weather/" aria-label="View Extended Weather App project">View Project</a>
             </article>
 
             <article class="project-card">
               <span class="card-number" aria-hidden="true">11</span>
               <h3>Async Fetch</h3>
-              <p>
-                Deep dive into asynchronous JavaScript — using Fetch and
-                async/await patterns for robust API communication.
-              </p>
-              <a
-                class="card-link"
-                href="Lecture-05-Portfolio Update Async_Fetch/"
-                aria-label="View Async Fetch project"
-                >View Project</a
-              >
+              <p>Deep dive into asynchronous JavaScript — using Fetch and async/await patterns for robust API communication.</p>
+              <a class="card-link" href="Lecture-05-Portfolio Update Async_Fetch/" aria-label="View Async Fetch project">View Project</a>
             </article>
 
             <article class="project-card">
               <span class="card-number" aria-hidden="true">12</span>
               <h3>Async Basics Demo</h3>
-              <p>
-                Demonstrating asynchronous JavaScript fundamentals — callbacks,
-                promises, and async/await with practical examples.
-              </p>
-              <a
-                class="card-link"
-                href="Async Basics Demo/"
-                aria-label="View Async Basics Demo project"
-                >View Project</a
-              >
+              <p>Demonstrating asynchronous JavaScript fundamentals — callbacks, promises, and async/await with practical examples.</p>
+              <a class="card-link" href="Async Basics Demo/" aria-label="View Async Basics Demo project">View Project</a>
             </article>
 
             <article class="project-card">
               <span class="card-number" aria-hidden="true">13</span>
               <h3>Backend Development</h3>
-              <p>
-                Introduction to server-side development — building REST APIs,
-                handling routes, and connecting to a database.
-              </p>
-              <a
-                class="card-link"
-                href="lecture-9-Backend/"
-                aria-label="View Backend Development project"
-                >View Project</a
-              >
+              <p>Introduction to server-side development — building REST APIs, handling routes, and connecting to a database.</p>
+              <a class="card-link" href="lecture-9-Backend/" aria-label="View Backend Development project">View Project</a>
             </article>
 
             <article class="project-card project-card--live">
               <span class="card-number" aria-hidden="true">14</span>
-              <span class="live-badge" aria-label="Live on Vercel">● Live</span>
+              <span class="live-badge" aria-label="Live on Vercel">&#9679; Live</span>
               <h3>Notes App</h3>
-              <p>
-                A full-featured notes application — create, edit, and manage
-                notes with a clean interface. Deployed live on Vercel.
-              </p>
-              <a
-                class="card-link"
-                href="https://note-app-roan-seven-31.vercel.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Launch Notes App on Vercel"
-                >Launch App</a
-              >
+              <p>A full-featured notes application — create, edit, and manage notes with a clean interface. Deployed live on Vercel.</p>
+              <a class="card-link" href="https://note-app-roan-seven-31.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Launch Notes App on Vercel">Launch App</a>
             </article>
 
             <article class="project-card project-card--live">
               <span class="card-number" aria-hidden="true">15</span>
-              <span class="live-badge" aria-label="Live on Vercel">● Live</span>
+              <span class="live-badge" aria-label="Live on Vercel">&#9679; Live</span>
               <h3>LivyLamp</h3>
-              <p>
-                A premium lighting e-commerce platform with AI-powered
-                recommendations, cart, authentication and an admin dashboard.
-                Deployed live on Vercel.
-              </p>
-              <a
-                class="card-link"
-                href="https://livy-lamp.vercel.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Launch LivyLamp on Vercel"
-                >Launch App</a
-              >
+              <p>A premium lighting e-commerce platform with cart, authentication and an admin dashboard. Deployed live on Vercel.</p>
+              <a class="card-link" href="https://livy-lamp.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Launch LivyLamp on Vercel">Launch App</a>
+            </article>
+
+            <article class="project-card">
+              <span class="card-number" aria-hidden="true">16</span>
+              <h3>IoT Sensor Dashboard <span class="coming-soon">Coming Soon</span></h3>
+              <p>A planned project to collect and visualise real-time data from IoT sensors using Python and a web-based dashboard.</p>
+              <a class="card-link" href="https://github.com/T-Tobi" target="_blank" rel="noopener noreferrer" aria-label="View GitHub profile">GitHub Profile</a>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ── Areas of Interest ─────────────────── -->
+      <section id="interests" class="interests-section" aria-labelledby="interests-heading">
+        <div class="container">
+          <div class="section-heading">
+            <h2 id="interests-heading">Areas of Interest</h2>
+            <p class="section-sub">What drives me forward</p>
+          </div>
+          <div class="interests-grid">
+            <article class="interest-card">
+              <h3>Technology &amp; Learning</h3>
+              <ul>
+                <li>Cloud Data Analytics</li>
+                <li>Programming Fundamentals</li>
+                <li>Learning New Software Tools</li>
+              </ul>
+            </article>
+            <article class="interest-card">
+              <h3>Personal Interest</h3>
+              <ul>
+                <li>Sports and Physical Fitness</li>
+                <li>Reading and Self Development</li>
+                <li>Problem-solving Activities</li>
+              </ul>
+            </article>
+            <article class="interest-card">
+              <h3>Future Plans</h3>
+              <ul>
+                <li>CFA Charterholder</li>
+                <li>Travel to 100 Countries</li>
+              </ul>
             </article>
           </div>
         </div>
       </section>
 
-      <!-- Contact -->
-      <section
-        id="contact"
-        class="contact-section"
-        aria-labelledby="contact-heading"
-      >
+      <!-- ── External Data Demo ────────────────── -->
+      <section id="external-data" class="data-section" aria-labelledby="data-heading">
+        <div class="container">
+          <div class="section-heading">
+            <h2 id="data-heading">External Data Demo</h2>
+            <p class="section-sub">Live data fetched from a public API</p>
+          </div>
+          <div class="data-inner">
+            <div class="button-group">
+              <button id="btnLoadData" class="btn-data">Load Random User</button>
+              <button id="btnClearData" class="btn-data btn-data--outline">Clear</button>
+            </div>
+            <div id="dataOutput" class="data-output" aria-live="polite"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── Contact ───────────────────────────── -->
+      <section id="contact" class="contact-section" aria-labelledby="contact-heading">
         <div class="container">
           <div class="section-heading">
             <h2 id="contact-heading">Get In Touch</h2>
@@ -1016,55 +341,39 @@
             <div class="ornament" aria-hidden="true">
               <div class="ornament-diamond"></div>
             </div>
-            <p>
-              Interested in collaborating or just want to say hello? Feel free
-              to reach out.
-            </p>
+            <p>Interested in collaborating or just want to say hello? Feel free to reach out.</p>
             <nav class="contact-links" aria-label="Contact options">
-              <a
-                class="contact-btn contact-btn--gold"
-                href="mailto:tobiashaolu8@gmail.com"
-                >Send an Email</a
-              >
-              <a
-                class="contact-btn contact-btn--outline"
-                href="https://github.com/T-Tobi"
-                target="_blank"
-                rel="noopener noreferrer"
-                >GitHub Profile</a
-              >
+              <a class="contact-btn contact-btn--gold" href="mailto:tobiashaolu8@gmail.com">Send an Email</a>
+              <a class="contact-btn contact-btn--outline" href="https://github.com/T-Tobi" target="_blank" rel="noopener noreferrer">GitHub Profile</a>
+              <a class="contact-btn contact-btn--outline" href="https://linkedin.com/in/tobi8ashaolu" target="_blank" rel="noopener noreferrer">LinkedIn</a>
             </nav>
           </div>
         </div>
       </section>
+
     </main>
 
     <!-- ══ FOOTER ══════════════════════════════════ -->
     <footer class="site-footer" role="contentinfo">
-      <p>
+      <nav class="footer-links" aria-label="Footer links">
+        <a href="mailto:tobiashaolu8@gmail.com">Email</a>
+        <span class="footer-dot" aria-hidden="true"></span>
+        <a href="https://linkedin.com/in/tobi8ashaolu" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <span class="footer-dot" aria-hidden="true"></span>
+        <a href="https://github.com/T-Tobi/Browser-Programming" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <span class="footer-dot" aria-hidden="true"></span>
+        <a href="weather-dashboard.html">Weather Dashboard</a>
+      </nav>
+      <p class="footer-copy">
         &copy; 2026 Oluwatobiloba Ashaolu
         <span class="footer-dot" aria-hidden="true"></span>
-        Built with GitHub Pages
-        <span class="footer-dot" aria-hidden="true"></span>
         Browser Programming
+        <span class="footer-dot" aria-hidden="true"></span>
+        Savonia UAS
       </p>
+      <p id="last-updated" class="footer-updated"></p>
     </footer>
 
-    <script>
-      // Scroll-reveal for project cards
-      const cards = document.querySelectorAll(".project-card");
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("visible");
-              observer.unobserve(entry.target);
-            }
-          });
-        },
-        { threshold: 0.12 },
-      );
-      cards.forEach((card) => observer.observe(card));
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
