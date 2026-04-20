@@ -23,13 +23,24 @@
 
     <!-- ══ HEADER ══════════════════════════════════ -->
     <header class="site-header" role="banner">
-      <button id="theme-toggle" aria-label="Toggle dark/light theme">
-        <span id="theme-icon">☀️</span> Toggle Theme
-      </button>
+      <div class="header-actions">
+        <a
+          href="weather-dashboard.html"
+          class="header-action-btn"
+          aria-label="Open SkyBoard weather dashboard"
+        >
+          🌤 Weather Forcast
+        </a>
+        <button id="theme-toggle" aria-label="Toggle dark/light theme">
+          <span id="theme-label">Light Mode</span>
+        </button>
+      </div>
 
       <p class="header-badge">Portfolio &mdash; 2026</p>
       <h1>Oluwatobiloba Ashaolu</h1>
-      <p class="tagline">IoT Student &bull; Browser Programming &bull; Web Developer</p>
+      <p class="tagline">
+        IoT Student &bull; Browser Programming &bull; Web Developer
+      </p>
 
       <div class="ornament" aria-hidden="true">
         <div class="ornament-diamond"></div>
@@ -39,7 +50,6 @@
         <ul>
           <li><a href="#about">About</a></li>
           <li><a href="#skills">Skills</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#interests">Interests</a></li>
           <li><a href="#contact">Contact</a></li>
@@ -49,7 +59,6 @@
 
     <!-- ══ MAIN ════════════════════════════════════ -->
     <main id="main-content">
-
       <!-- ── About ─────────────────────────────── -->
       <section id="about" class="about-section" aria-labelledby="about-heading">
         <div class="container">
@@ -62,24 +71,39 @@
               <div class="ornament-diamond"></div>
             </div>
             <div class="about-meta">
-              <p><strong>Role:</strong> <em>Student / Aspiring Software &amp; IoT Developer</em></p>
-              <p><strong>Degree Program:</strong> <em>Internet of Things (IoT), Savonia University of Applied Sciences</em></p>
+              <p>
+                <strong>Role:</strong>
+                <em>Student / Aspiring Software &amp; IoT Developer</em>
+              </p>
+              <p>
+                <strong>Degree Program:</strong>
+                <em
+                  >Internet of Things (IoT), Savonia University of Applied
+                  Sciences</em
+                >
+              </p>
               <p><strong>Location:</strong> <em>Kuopio, Finland</em></p>
             </div>
             <p>
-              I'm an <strong>IoT student</strong> with an interest in programming, data
-              analysis, and practical problem-solving using technology. I have experience
-              with Python, object-oriented programming, and web development — and I'm
-              currently studying <strong>Browser Programming</strong>, building modern web
-              experiences from the ground up. Each project here marks a step forward in
-              crafting interfaces that are both <strong>functional and considered</strong>.
+              I'm an <strong>IoT student</strong> with an interest in
+              programming, data analysis, and practical problem-solving using
+              technology. I have experience with Python, object-oriented
+              programming, and web development — and I'm currently studying
+              <strong>Browser Programming</strong>, building modern web
+              experiences from the ground up. Each project here marks a step
+              forward in crafting interfaces that are both
+              <strong>functional and considered</strong>.
             </p>
           </div>
         </div>
       </section>
 
       <!-- ── Skills ────────────────────────────── -->
-      <section id="skills" class="skills-section" aria-labelledby="skills-heading">
+      <section
+        id="skills"
+        class="skills-section"
+        aria-labelledby="skills-heading"
+      >
         <div class="container">
           <div class="section-heading">
             <h2 id="skills-heading">Skills</h2>
@@ -87,20 +111,44 @@
           </div>
           <ul class="skills-grid" role="list">
             <li><span class="skill-tag skill-tag--gold">HTML5</span></li>
-            <li><span class="skill-tag skill-tag--gold">Semantic Markup</span></li>
-            <li><span class="skill-tag skill-tag--gold">Accessibility</span></li>
+            <li>
+              <span class="skill-tag skill-tag--gold">Semantic Markup</span>
+            </li>
+            <li>
+              <span class="skill-tag skill-tag--gold">Accessibility</span>
+            </li>
             <li><span class="skill-tag skill-tag--green">CSS3</span></li>
-            <li><span class="skill-tag skill-tag--green">Responsive Design</span></li>
-            <li><span class="skill-tag skill-tag--green">CSS Grid &amp; Flexbox</span></li>
-            <li><span class="skill-tag skill-tag--crimson">JavaScript</span></li>
-            <li><span class="skill-tag skill-tag--crimson">DOM Manipulation</span></li>
-            <li><span class="skill-tag skill-tag--crimson">Fetch &amp; Async/Await</span></li>
-            <li><span class="skill-tag skill-tag--crimson">Browser APIs</span></li>
+            <li>
+              <span class="skill-tag skill-tag--green">Responsive Design</span>
+            </li>
+            <li>
+              <span class="skill-tag skill-tag--green"
+                >CSS Grid &amp; Flexbox</span
+              >
+            </li>
+            <li>
+              <span class="skill-tag skill-tag--crimson">JavaScript</span>
+            </li>
+            <li>
+              <span class="skill-tag skill-tag--crimson">DOM Manipulation</span>
+            </li>
+            <li>
+              <span class="skill-tag skill-tag--crimson"
+                >Fetch &amp; Async/Await</span
+              >
+            </li>
+            <li>
+              <span class="skill-tag skill-tag--crimson">Browser APIs</span>
+            </li>
             <li><span class="skill-tag skill-tag--crimson">Python</span></li>
             <li><span class="skill-tag skill-tag--green">IoT Systems</span></li>
-            <li><span class="skill-tag skill-tag--green">Data Analysis</span></li>
+            <li>
+              <span class="skill-tag skill-tag--green">Data Analysis</span>
+            </li>
             <li><span class="skill-tag skill-tag--gold">LTspice</span></li>
-            <li><span class="skill-tag skill-tag--gold">Git &amp; GitHub</span></li>
+            <li>
+              <span class="skill-tag skill-tag--gold">Git &amp; GitHub</span>
+            </li>
             <li><span class="skill-tag skill-tag--gold">GitHub Pages</span></li>
             <li><span class="skill-tag skill-tag--gold">Vercel</span></li>
             <li><span class="skill-tag skill-tag--gold">Render</span></li>
@@ -109,49 +157,12 @@
         </div>
       </section>
 
-      <!-- ── Portfolio Media ───────────────────── -->
-      <section id="portfolio" class="media-section" aria-labelledby="portfolio-heading">
-        <div class="container">
-          <div class="section-heading">
-            <h2 id="portfolio-heading">Portfolio</h2>
-            <p class="section-sub">Samples &amp; learning resources</p>
-          </div>
-          <div class="media-grid">
-            <figure class="media-card">
-              <img src="Sample-img.jpg" alt="Sample Portfolio Image" loading="lazy" />
-              <figcaption>Fig 1.0 — Sample Portfolio</figcaption>
-            </figure>
-
-            <figure class="media-card">
-              <div class="iframe-wrap">
-                <iframe
-                  src="https://www.youtube.com/embed/kX3TfdUqpuU"
-                  title="Semantic HTML Training Video"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
-                ></iframe>
-              </div>
-              <figcaption>Fig 2.0 — Semantic HTML Training Video</figcaption>
-            </figure>
-
-            <figure class="media-card media-card--link">
-              <div class="media-link-icon" aria-hidden="true">⌥</div>
-              <figcaption>
-                <a
-                  href="https://github.com/T-Tobi/Browser-Programming"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="card-link"
-                >GitHub Repository</a>
-              </figcaption>
-            </figure>
-          </div>
-        </div>
-      </section>
-
       <!-- ── Projects ──────────────────────────── -->
-      <section id="projects" class="projects-section" aria-labelledby="projects-heading">
+      <section
+        id="projects"
+        class="projects-section"
+        aria-labelledby="projects-heading"
+      >
         <div class="container">
           <div class="section-heading">
             <h2 id="projects-heading">Projects</h2>
@@ -159,127 +170,271 @@
           </div>
 
           <div class="projects-grid">
-
             <article class="project-card">
               <span class="card-number" aria-hidden="true">01</span>
               <h3>GitHub Basics</h3>
-              <p>Introduction to version control — creating repositories, committing changes, branching, and collaborating with Git and GitHub.</p>
-              <a class="card-link" href="Lecture-01-GitHub-basics/" aria-label="View GitHub Basics project">View Project</a>
+              <p>
+                Introduction to version control — creating repositories,
+                committing changes, branching, and collaborating with Git and
+                GitHub.
+              </p>
+              <a
+                class="card-link"
+                href="Lecture-01-GitHub-basics/"
+                aria-label="View GitHub Basics project"
+                >View Project</a
+              >
             </article>
 
             <article class="project-card">
               <span class="card-number" aria-hidden="true">02</span>
               <h3>Semantic HTML</h3>
-              <p>Practising proper HTML document structure, landmark elements, and accessibility best practices.</p>
-              <a class="card-link" href="Lecture-02-semantic-html/" aria-label="View Semantic HTML project">View Project</a>
+              <p>
+                Practising proper HTML document structure, landmark elements,
+                and accessibility best practices.
+              </p>
+              <a
+                class="card-link"
+                href="Lecture-02-semantic-html/"
+                aria-label="View Semantic HTML project"
+                >View Project</a
+              >
             </article>
 
             <article class="project-card">
               <span class="card-number" aria-hidden="true">03</span>
               <h3>CSS Basics</h3>
-              <p>Exploring styling fundamentals — layouts, color theory, typography, and responsive design techniques.</p>
-              <a class="card-link" href="Lecture-03-CSS-Basics/" aria-label="View CSS Basics project">View Project</a>
+              <p>
+                Exploring styling fundamentals — layouts, color theory,
+                typography, and responsive design techniques.
+              </p>
+              <a
+                class="card-link"
+                href="Lecture-03-CSS-Basics/"
+                aria-label="View CSS Basics project"
+                >View Project</a
+              >
             </article>
 
             <article class="project-card">
               <span class="card-number" aria-hidden="true">04</span>
               <h3>JavaScript Basics</h3>
-              <p>Core language concepts including variables, functions, control flow, and interactive browser behaviour.</p>
-              <a class="card-link" href="Lecture-04-Java-Basics/" aria-label="View JavaScript Basics project">View Project</a>
+              <p>
+                Core language concepts including variables, functions, control
+                flow, and interactive browser behaviour.
+              </p>
+              <a
+                class="card-link"
+                href="Lecture-04-Java-Basics/"
+                aria-label="View JavaScript Basics project"
+                >View Project</a
+              >
             </article>
 
             <article class="project-card">
               <span class="card-number" aria-hidden="true">05</span>
               <h3>JS Basics — In Class</h3>
-              <p>Hands-on in-class JavaScript exercises covering core concepts, event handling, and beginner scripting patterns.</p>
-              <a class="card-link" href="L04-js-basics-in-class/" aria-label="View JS Basics in class project">View Project</a>
+              <p>
+                Hands-on in-class JavaScript exercises covering core concepts,
+                event handling, and beginner scripting patterns.
+              </p>
+              <a
+                class="card-link"
+                href="L04-js-basics-in-class/"
+                aria-label="View JS Basics in class project"
+                >View Project</a
+              >
             </article>
 
             <article class="project-card">
               <span class="card-number" aria-hidden="true">06</span>
               <h3>DOM &amp; State APIs</h3>
-              <p>Manipulating the Document Object Model and managing application state through browser APIs.</p>
-              <a class="card-link" href="L05-dom-state-apis-in-class/" aria-label="View DOM and State APIs project">View Project</a>
+              <p>
+                Manipulating the Document Object Model and managing application
+                state through browser APIs.
+              </p>
+              <a
+                class="card-link"
+                href="L05-dom-state-apis-in-class/"
+                aria-label="View DOM and State APIs project"
+                >View Project</a
+              >
             </article>
 
             <article class="project-card">
               <span class="card-number" aria-hidden="true">07</span>
               <h3>Portfolio Page</h3>
-              <p>A personal portfolio project showcasing learned skills in layout, design, and front-end development.</p>
-              <a class="card-link" href="Lecture-05-Portfolio-Page/" aria-label="View Portfolio Page project">View Project</a>
+              <p>
+                A personal portfolio project showcasing learned skills in
+                layout, design, and front-end development.
+              </p>
+              <a
+                class="card-link"
+                href="Lecture-05-Portfolio-Page/"
+                aria-label="View Portfolio Page project"
+                >View Project</a
+              >
             </article>
 
             <article class="project-card">
               <span class="card-number" aria-hidden="true">08</span>
               <h3>Data Formats &amp; APIs</h3>
-              <p>Working with JSON and XML data formats, parsing API responses, and structuring data for use in the browser.</p>
-              <a class="card-link" href="Lecture-7-Data Formats-APIs/" aria-label="View Data Formats and APIs project">View Project</a>
+              <p>
+                Working with JSON and XML data formats, parsing API responses,
+                and structuring data for use in the browser.
+              </p>
+              <a
+                class="card-link"
+                href="Lecture-7-Data Formats-APIs/"
+                aria-label="View Data Formats and APIs project"
+                >View Project</a
+              >
             </article>
 
             <article class="project-card">
               <span class="card-number" aria-hidden="true">09</span>
               <h3>Weather App</h3>
-              <p>A live weather application powered by an external REST API, displaying real-time conditions and forecasts.</p>
-              <a class="card-link" href="Lecture-7-Portfolio_weather/" aria-label="View Weather App project">View Project</a>
+              <p>
+                A live weather application powered by an external REST API,
+                displaying real-time conditions and forecasts.
+              </p>
+              <a
+                class="card-link"
+                href="Lecture-7-Portfolio_weather/"
+                aria-label="View Weather App project"
+                >View Project</a
+              >
             </article>
 
             <article class="project-card">
               <span class="card-number" aria-hidden="true">10</span>
               <h3>Weather App — Extended</h3>
-              <p>An extended version of the weather project with additional features and UI improvements built on the original.</p>
-              <a class="card-link" href="lecture-7weather/" aria-label="View Extended Weather App project">View Project</a>
+              <p>
+                An extended version of the weather project with additional
+                features and UI improvements built on the original.
+              </p>
+              <a
+                class="card-link"
+                href="lecture-7weather/"
+                aria-label="View Extended Weather App project"
+                >View Project</a
+              >
             </article>
 
             <article class="project-card">
               <span class="card-number" aria-hidden="true">11</span>
               <h3>Async Fetch</h3>
-              <p>Deep dive into asynchronous JavaScript — using Fetch and async/await patterns for robust API communication.</p>
-              <a class="card-link" href="Lecture-05-Portfolio Update Async_Fetch/" aria-label="View Async Fetch project">View Project</a>
+              <p>
+                Deep dive into asynchronous JavaScript — using Fetch and
+                async/await patterns for robust API communication.
+              </p>
+              <a
+                class="card-link"
+                href="Lecture-05-Portfolio Update Async_Fetch/"
+                aria-label="View Async Fetch project"
+                >View Project</a
+              >
             </article>
 
             <article class="project-card">
               <span class="card-number" aria-hidden="true">12</span>
               <h3>Async Basics Demo</h3>
-              <p>Demonstrating asynchronous JavaScript fundamentals — callbacks, promises, and async/await with practical examples.</p>
-              <a class="card-link" href="Async Basics Demo/" aria-label="View Async Basics Demo project">View Project</a>
+              <p>
+                Demonstrating asynchronous JavaScript fundamentals — callbacks,
+                promises, and async/await with practical examples.
+              </p>
+              <a
+                class="card-link"
+                href="Async Basics Demo/"
+                aria-label="View Async Basics Demo project"
+                >View Project</a
+              >
             </article>
 
             <article class="project-card">
               <span class="card-number" aria-hidden="true">13</span>
               <h3>Backend Development</h3>
-              <p>Introduction to server-side development — building REST APIs, handling routes, and connecting to a database.</p>
-              <a class="card-link" href="lecture-9-Backend/" aria-label="View Backend Development project">View Project</a>
+              <p>
+                Introduction to server-side development — building REST APIs,
+                handling routes, and connecting to a database.
+              </p>
+              <a
+                class="card-link"
+                href="lecture-9-Backend/"
+                aria-label="View Backend Development project"
+                >View Project</a
+              >
             </article>
 
             <article class="project-card project-card--live">
               <span class="card-number" aria-hidden="true">14</span>
-              <span class="live-badge" aria-label="Live on Vercel">&#9679; Live</span>
+              <span class="live-badge" aria-label="Live on Vercel"
+                >&#9679; Live</span
+              >
               <h3>Notes App</h3>
-              <p>A full-featured notes application — create, edit, and manage notes with a clean interface. Deployed live on Vercel.</p>
-              <a class="card-link" href="https://note-app-roan-seven-31.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Launch Notes App on Vercel">Launch App</a>
+              <p>
+                A full-featured notes application — create, edit, and manage
+                notes with a clean interface. Deployed live on Vercel.
+              </p>
+              <a
+                class="card-link"
+                href="https://note-app-roan-seven-31.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Launch Notes App on Vercel"
+                >Launch App</a
+              >
             </article>
 
             <article class="project-card project-card--live">
               <span class="card-number" aria-hidden="true">15</span>
-              <span class="live-badge" aria-label="Live on Vercel">&#9679; Live</span>
+              <span class="live-badge" aria-label="Live on Vercel"
+                >&#9679; Live</span
+              >
               <h3>LivyLamp</h3>
-              <p>A premium lighting e-commerce platform with cart, authentication and an admin dashboard. Deployed live on Vercel.</p>
-              <a class="card-link" href="https://livy-lamp.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Launch LivyLamp on Vercel">Launch App</a>
+              <p>
+                A premium lighting e-commerce platform with cart, authentication
+                and an admin dashboard. Deployed live on Vercel.
+              </p>
+              <a
+                class="card-link"
+                href="https://livy-lamp.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Launch LivyLamp on Vercel"
+                >Launch App</a
+              >
             </article>
 
             <article class="project-card">
               <span class="card-number" aria-hidden="true">16</span>
-              <h3>IoT Sensor Dashboard <span class="coming-soon">Coming Soon</span></h3>
-              <p>A planned project to collect and visualise real-time data from IoT sensors using Python and a web-based dashboard.</p>
-              <a class="card-link" href="https://github.com/T-Tobi" target="_blank" rel="noopener noreferrer" aria-label="View GitHub profile">GitHub Profile</a>
+              <h3>
+                IoT Sensor Dashboard
+                <span class="coming-soon">Coming Soon</span>
+              </h3>
+              <p>
+                A planned project to collect and visualise real-time data from
+                IoT sensors using Python and a web-based dashboard.
+              </p>
+              <a
+                class="card-link"
+                href="https://github.com/T-Tobi"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="View GitHub profile"
+                >GitHub Profile</a
+              >
             </article>
-
           </div>
         </div>
       </section>
 
       <!-- ── Areas of Interest ─────────────────── -->
-      <section id="interests" class="interests-section" aria-labelledby="interests-heading">
+      <section
+        id="interests"
+        class="interests-section"
+        aria-labelledby="interests-heading"
+      >
         <div class="container">
           <div class="section-heading">
             <h2 id="interests-heading">Areas of Interest</h2>
@@ -314,7 +469,11 @@
       </section>
 
       <!-- ── External Data Demo ────────────────── -->
-      <section id="external-data" class="data-section" aria-labelledby="data-heading">
+      <section
+        id="external-data"
+        class="data-section"
+        aria-labelledby="data-heading"
+      >
         <div class="container">
           <div class="section-heading">
             <h2 id="data-heading">External Data Demo</h2>
@@ -322,8 +481,12 @@
           </div>
           <div class="data-inner">
             <div class="button-group">
-              <button id="btnLoadData" class="btn-data">Load Random User</button>
-              <button id="btnClearData" class="btn-data btn-data--outline">Clear</button>
+              <button id="btnLoadData" class="btn-data">
+                Load Random User
+              </button>
+              <button id="btnClearData" class="btn-data btn-data--outline">
+                Clear
+              </button>
             </div>
             <div id="dataOutput" class="data-output" aria-live="polite"></div>
           </div>
@@ -331,7 +494,11 @@
       </section>
 
       <!-- ── Contact ───────────────────────────── -->
-      <section id="contact" class="contact-section" aria-labelledby="contact-heading">
+      <section
+        id="contact"
+        class="contact-section"
+        aria-labelledby="contact-heading"
+      >
         <div class="container">
           <div class="section-heading">
             <h2 id="contact-heading">Get In Touch</h2>
@@ -341,16 +508,34 @@
             <div class="ornament" aria-hidden="true">
               <div class="ornament-diamond"></div>
             </div>
-            <p>Interested in collaborating or just want to say hello? Feel free to reach out.</p>
+            <p>
+              Interested in collaborating or just want to say hello? Feel free
+              to reach out.
+            </p>
             <nav class="contact-links" aria-label="Contact options">
-              <a class="contact-btn contact-btn--gold" href="mailto:tobiashaolu8@gmail.com">Send an Email</a>
-              <a class="contact-btn contact-btn--outline" href="https://github.com/T-Tobi" target="_blank" rel="noopener noreferrer">GitHub Profile</a>
-              <a class="contact-btn contact-btn--outline" href="https://linkedin.com/in/tobi8ashaolu" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              <a
+                class="contact-btn contact-btn--gold"
+                href="mailto:tobiashaolu8@gmail.com"
+                >Send an Email</a
+              >
+              <a
+                class="contact-btn contact-btn--outline"
+                href="https://github.com/T-Tobi"
+                target="_blank"
+                rel="noopener noreferrer"
+                >GitHub Profile</a
+              >
+              <a
+                class="contact-btn contact-btn--outline"
+                href="https://linkedin.com/in/tobi8ashaolu"
+                target="_blank"
+                rel="noopener noreferrer"
+                >LinkedIn</a
+              >
             </nav>
           </div>
         </div>
       </section>
-
     </main>
 
     <!-- ══ FOOTER ══════════════════════════════════ -->
@@ -358,11 +543,19 @@
       <nav class="footer-links" aria-label="Footer links">
         <a href="mailto:tobiashaolu8@gmail.com">Email</a>
         <span class="footer-dot" aria-hidden="true"></span>
-        <a href="https://linkedin.com/in/tobi8ashaolu" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a
+          href="https://linkedin.com/in/tobi8ashaolu"
+          target="_blank"
+          rel="noopener noreferrer"
+          >LinkedIn</a
+        >
         <span class="footer-dot" aria-hidden="true"></span>
-        <a href="https://github.com/T-Tobi/Browser-Programming" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <span class="footer-dot" aria-hidden="true"></span>
-        <a href="weather-dashboard.html">Weather Dashboard</a>
+        <a
+          href="https://github.com/T-Tobi/Browser-Programming"
+          target="_blank"
+          rel="noopener noreferrer"
+          >GitHub</a
+        >
       </nav>
       <p class="footer-copy">
         &copy; 2026 Oluwatobiloba Ashaolu

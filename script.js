@@ -19,20 +19,22 @@ cards.forEach((card) => observer.observe(card));
 
 /* ── 2. Theme Toggle ───────────────────────── */
 const themeToggle = document.getElementById("theme-toggle");
-const themeIcon   = document.getElementById("theme-icon");
+const themeLabel  = document.getElementById("theme-label");
 const html        = document.documentElement;
 
-// Load saved theme preference
-const savedTheme = localStorage.getItem("portfolio-theme") || "dark";
-html.setAttribute("data-theme", savedTheme);
-themeIcon.textContent = savedTheme === "dark" ? "☀️" : "🌙";
+function applyTheme(theme) {
+  html.setAttribute("data-theme", theme);
+  // Button label shows what you'll switch TO
+  themeLabel.textContent = theme === "dark" ? "Light Mode" : "Dark Mode";
+  localStorage.setItem("portfolio-theme", theme);
+}
+
+// Load saved preference
+applyTheme(localStorage.getItem("portfolio-theme") || "dark");
 
 themeToggle.addEventListener("click", () => {
   const current = html.getAttribute("data-theme");
-  const next    = current === "dark" ? "light" : "dark";
-  html.setAttribute("data-theme", next);
-  themeIcon.textContent = next === "dark" ? "☀️" : "🌙";
-  localStorage.setItem("portfolio-theme", next);
+  applyTheme(current === "dark" ? "light" : "dark");
 });
 
 /* ── 3. Last Updated ───────────────────────── */
